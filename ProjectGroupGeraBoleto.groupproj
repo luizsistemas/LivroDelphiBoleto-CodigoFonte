@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{410BE24E-71DF-4B44-9220-7F951D1542B9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TestesUnitarios\GeraBoletoTest.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GeraBoletoTest">
+        <MSBuild Projects="TestesUnitarios\GeraBoletoTest.dproj"/>
+    </Target>
+    <Target Name="GeraBoletoTest:Clean">
+        <MSBuild Projects="TestesUnitarios\GeraBoletoTest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GeraBoletoTest:Make">
+        <MSBuild Projects="TestesUnitarios\GeraBoletoTest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GeraBoletoTest"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GeraBoletoTest:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GeraBoletoTest:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

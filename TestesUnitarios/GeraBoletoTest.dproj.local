@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/05/13 16:33:01.867,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/13 16:45:20.286,F:\Cursos\Boleto\GeraBoletos\Source\Banco.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
