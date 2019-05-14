@@ -13,6 +13,7 @@ type
     FConta: TConta;
     FPagador: TPessoa;
   public
+
     property Beneficiario: TPessoa read FBeneficiario write FBeneficiario;
     property Conta: TConta read FConta write FConta;
     property Titulo: TTitulo read FTitulo write FTitulo;
