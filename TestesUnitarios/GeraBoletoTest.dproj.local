@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2019/05/13 16:33:01.867,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
-    <Transaction>2019/05/13 16:45:20.286,F:\Cursos\Boleto\GeraBoletos\Source\Banco.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/13 16:33:01.000.867,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/13 16:45:20.000.286,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas=F:\Cursos\Boleto\GeraBoletos\Source\Banco.pas</Transaction>
+    <Transaction>2019/05/13 17:22:20.000.763,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/13 17:22:31.000.883,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas=F:\Cursos\Boleto\GeraBoletos\Source\Conta.pas</Transaction>
+    <Transaction>2019/05/14 08:01:28.487,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:01:38.898,F:\Cursos\Boleto\GeraBoletos\Source\Pessoa.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:10:12.826,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:10:28.826,F:\Cursos\Boleto\GeraBoletos\Source\Titulo.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:52:25.693,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:52:38.533,F:\Cursos\Boleto\GeraBoletos\Source\Boleto.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -19,8 +19,7 @@ uses
   Banco in '..\Source\Banco.pas',
   Conta in '..\Source\Conta.pas',
   Pessoa in '..\Source\Pessoa.pas',
-  Titulo in '..\Source\Titulo.pas',
-  Boleto in '..\Source\Boleto.pas';
+  Titulo in '..\Source\Titulo.pas';
 
 {$R *.RES}
 

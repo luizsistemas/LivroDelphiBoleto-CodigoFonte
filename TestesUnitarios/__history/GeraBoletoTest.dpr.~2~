@@ -16,11 +16,7 @@ program GeraBoletoTest;
 
 uses
   DUnitTestRunner,
-  Banco in '..\Source\Banco.pas',
-  Conta in '..\Source\Conta.pas',
-  Pessoa in '..\Source\Pessoa.pas',
-  Titulo in '..\Source\Titulo.pas',
-  Boleto in '..\Source\Boleto.pas';
+  Banco in '..\Source\Banco.pas';
 
 {$R *.RES}
 

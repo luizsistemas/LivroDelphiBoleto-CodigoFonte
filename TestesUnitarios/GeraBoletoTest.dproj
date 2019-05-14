@@ -84,6 +84,10 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="..\Source\Banco.pas"/>
+        <DCCReference Include="..\Source\Conta.pas"/>
+        <DCCReference Include="..\Source\Pessoa.pas"/>
+        <DCCReference Include="..\Source\Titulo.pas"/>
+        <DCCReference Include="..\Source\Boleto.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
