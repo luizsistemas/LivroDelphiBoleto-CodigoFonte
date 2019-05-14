@@ -1,4 +1,4 @@
 /TestesUnitarios/*.dcu
 /TestesUnitarios/__history
 /TestesUnitarios/__recovery
-.exe
+/TestesUnitarios/Win32
