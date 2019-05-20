@@ -12,7 +12,6 @@ type
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
-    procedure GeraBoleto;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
@@ -32,8 +31,6 @@ type
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
-
-    procedure GeraBoleto;
   end;
 
 implementation
@@ -56,12 +53,6 @@ begin
   FPagador.Free;
 
   inherited;
-end;
-
-procedure TBoleto.GeraBoleto;
-begin
-  Formatar;
-  Validar;
 end;
 
 function TBoleto.GetBeneficiario: TPessoa;

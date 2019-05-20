@@ -8,10 +8,6 @@ uses
 type
   TestTBoleto001 = class(TTestCase)
   strict private
-    FBeneficiario: TPessoa;
-    FConta: TConta;
-    FTitulo: TTitulo;
-    FPagador: TPessoa;
     FBoleto001: IBoleto;
 
     procedure SetDadosPadrao;
@@ -39,123 +35,121 @@ uses
 
 procedure TestTBoleto001.SetDadosPadrao;
 begin
-  FConta.Banco.Numero := '001';
-  FConta.Banco.DigitoNumero := '9';
-  FConta.Agencia := '9999';
-  FConta.DigitoAgencia := '9';
-  FConta.Conta := '123456';
-  FConta.DigitoConta := '1';
-  FBeneficiario.CnpjCpf := '12345678901';
-  FBeneficiario.Nome := 'Teste Beneficiario';
-  FTitulo.Emissao := StrToDate('1/1/2019');
-  FTitulo.Vencto :=  StrToDate('30/05/2019');
-  FTitulo.EspecMoeda := '9';
-  FTitulo.EspecDoc := 'DM';
-  FTitulo.Aceite := 'N';
-  FTitulo.DataProc := StrToDate('1/1/2019');
-  FTitulo.Valor := 300.00;
-  FPagador.CnpjCpf := '12345678901';
-  FPagador.Nome := 'Teste Pagador';
-  FPagador.Endereco.Logradouro := 'Rua Teste 01';
-  FPagador.Endereco.Numero := '23';
-  FPagador.Endereco.Bairro := 'Centro';
-  FPagador.Endereco.Cidade := 'Balsas';
-  FPagador.Endereco.Uf := 'MA';
+  //Conta
+  FBoleto001.GetConta.Banco.Numero := '001';
+  FBoleto001.GetConta.Banco.DigitoNumero := '9';
+  FBoleto001.GetConta.Agencia := '9999';
+  FBoleto001.GetConta.DigitoAgencia := '9';
+  FBoleto001.GetConta.Conta := '123456';
+  FBoleto001.GetConta.DigitoConta := '1';
+  //Beneficiario
+  FBoleto001.GetBeneficiario.CnpjCpf := '12345678901';
+  FBoleto001.GetBeneficiario.Nome := 'Teste Beneficiario';
+  //Titulo
+  FBoleto001.GetTitulo.Emissao := StrToDate('1/1/2019');
+  FBoleto001.GetTitulo.Vencto :=  StrToDate('30/05/2019');
+  FBoleto001.GetTitulo.EspecMoeda := '9';
+  FBoleto001.GetTitulo.EspecDoc := 'DM';
+  FBoleto001.GetTitulo.Aceite := 'N';
+  FBoleto001.GetTitulo.DataProc := StrToDate('1/1/2019');
+  FBoleto001.GetTitulo.Valor := 300.00;
+  //Pagador
+  FBoleto001.GetPagador.CnpjCpf := '12345678901';
+  FBoleto001.GetPagador.Nome := 'Teste Pagador';
+  FBoleto001.GetPagador.Endereco.Logradouro := 'Rua Teste 01';
+  FBoleto001.GetPagador.Endereco.Numero := '23';
+  FBoleto001.GetPagador.Endereco.Bairro := 'Centro';
+  FBoleto001.GetPagador.Endereco.Cidade := 'Balsas';
+  FBoleto001.GetPagador.Endereco.Uf := 'MA';
 end;
 
 procedure TestTBoleto001.SetUp;
 begin
-  FBeneficiario := TPessoa.Create;
-  FConta := TConta.Create;
-  FTitulo := TTitulo.Create;
-  FPagador := TPessoa.Create;
+  FBoleto001 := TBoleto001.Create;
   SetDadosPadrao;
 end;
 
 procedure TestTBoleto001.TearDown;
 begin
-  FBeneficiario.Free;
-  FConta.Free;
-  FTitulo.Free;
-  FPagador.Free;
+  //
 end;
 
 procedure TestTBoleto001.TestDigitoAgencia;
 begin
-  FConta.DigitoAgencia := ' 1';
-  CheckEquals('1', FConta.DigitoAgencia, 'Dídigo agência inválido');
+  FBoleto001.GetConta.DigitoAgencia := ' 1';
+  CheckEquals('1', FBoleto001.GetConta.DigitoAgencia, 'Dídigo agência inválido');
 end;
 
 procedure TestTBoleto001.TestDigitoAgenciaMaiorQueUmDigito;
 begin
   StartExpectingException(exception);
-  FConta.DigitoAgencia := '14';
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
+  FBoleto001.GetConta.DigitoAgencia := '14';
+  FBoleto001.GeraBoleto;
   StopExpectingException('Nenhuma exceção gerada quando informado dígito da agência maior que um dígito');
 end;
 
 procedure TestTBoleto001.TestDigitoDaConta;
 begin
-  FConta.DigitoConta := ' 1     ';
-  CheckEquals('1', FConta.DigitoConta, 'Dídigo da conta inválido');
+  FBoleto001.GetConta.DigitoConta := ' 1     ';
+  CheckEquals('1', FBoleto001.GetConta.DigitoConta, 'Dídigo da conta inválido');
 end;
 
 procedure TestTBoleto001.TestDigitoDaContaMaiorQueUmDigito;
 begin
   StartExpectingException(exception);
-  FConta.DigitoConta := '18';
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
+  FBoleto001.GetConta.DigitoConta := '18';
+  FBoleto001.GeraBoleto;
   StopExpectingException('Nenhuma exceção gerada quando informado dígito da conta maior que um dígito');
 end;
 
 procedure TestTBoleto001.TestDigitoDoNumeroDoBancoComEspacos;
 begin
-  FConta.Banco.DigitoNumero := ' 9 ';
-  CheckTrue(FConta.Banco.DigitoNumero = '9', 'Dígito do Número do banco inválido!');
+  FBoleto001.GetConta.Banco.DigitoNumero := ' 9 ';
+  CheckTrue(FBoleto001.GetConta.Banco.DigitoNumero = '9', 'Dígito do Número do banco inválido!');
 end;
 
 procedure TestTBoleto001.TestDigitoDoNumeroDoBancoInvalido;
 begin
   StartExpectingException(exception);
-  FConta.Banco.DigitoNumero := '8';
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
+  FBoleto001.GetConta.Banco.DigitoNumero := '8';
+  FBoleto001.GeraBoleto;
   StopExpectingException('Nenhuma exceção gerada quando informado dígito do número do banco inválido');
 end;
 
 procedure TestTBoleto001.TestFormatacaoDoNumeroDaAgencia;
 begin
-  FConta.Agencia := '123';
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
-  CheckEquals('0123', FConta.Agencia, 'Agência com formato inválido!');
+  FBoleto001.GetConta.Agencia := '123';
+  FBoleto001.GeraBoleto;
+  CheckEquals('0123', FBoleto001.GetConta.Agencia, 'Agência com formato inválido!');
 end;
 
 procedure TestTBoleto001.TestFormatacaoDoNumeroDaConta;
 begin
-  FConta.Conta := '12345';
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
-  CheckEquals('00012345', FConta.Conta, 'Formatação do número da conta inválido');
+  FBoleto001.GetConta.Conta := '12345';
+  FBoleto001.GeraBoleto;
+  CheckEquals('00012345', FBoleto001.GetConta.Conta, 'Formatação do número da conta inválido');
 end;
 
 procedure TestTBoleto001.TestNumeroDaContaComCarectereInvalido;
 begin
   StartExpectingException(exception);
-  FConta.Conta := 'a123';
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
+  FBoleto001.GetConta.Conta := 'a123';
+  FBoleto001.GeraBoleto;
   StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na conta');
 end;
 
 procedure TestTBoleto001.TestValidaSeNumeroCorrespondeAoBancoDoBrasil;
 begin
   StartExpectingException(exception);
-  FConta.Banco.Numero := '237'; // número do Bradesco
-  FBoleto001 := TBoleto001.Create(FBeneficiario, FConta, FTitulo, FPagador);
+  FBoleto001.GetConta.Banco.Numero := '237'; // número do Bradesco
+  FBoleto001.GeraBoleto;
   StopExpectingException('Nenhuma exceção gerada quando Número do Banco inválido');
 end;
 
 procedure TestTBoleto001.TestVerificaQtdeCaracteresDoNumeroDoBanco;
 begin
-  FConta.Banco.Numero := ' 001 ';
-  CheckTrue(FConta.Banco.Numero = '001', 'Número do banco inválido!');
+  FBoleto001.GetConta.Banco.Numero := ' 001 ';
+  CheckTrue(FBoleto001.GetConta.Banco.Numero = '001', 'Número do banco inválido!');
 end;
 
 initialization

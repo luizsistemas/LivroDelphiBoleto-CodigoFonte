@@ -13,6 +13,7 @@ type
   private
     procedure Validar; override;
     procedure Formatar; override;
+  public
   end;
 
   TFactoryBBFormataNossoNumero = class
