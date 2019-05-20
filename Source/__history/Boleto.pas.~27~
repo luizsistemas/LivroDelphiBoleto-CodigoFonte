@@ -58,9 +58,10 @@ begin
 end;
 
 procedure TBoleto.Gerar;
+var
+  Boleto: IGeraBoletoBuilder;
 begin
-  TBoletoFactory
-            .GetFormatter(Self)
+  Boleto := TBoletoFactory.GetFormatter(Self)
             .FormataCampos
             .ValidaDados
             .FormataNossoNumero

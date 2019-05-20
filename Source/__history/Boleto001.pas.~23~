@@ -9,17 +9,17 @@ const
   DIGITO_NUM = '9';
 
 type
-  TBBFormata = class(TInterfacedObject, IGeraBoletoBuilder)
+  TBBFormata = class(TInterfacedObject, IFormataBoletoBuilder)
   private
     FBoleto: IBoleto;
   public
     constructor Create(ABoleto: IBoleto);
-    function FormataCampos: IGeraBoletoBuilder;
-    function ValidaDados: IGeraBoletoBuilder;
-    function FormataNossoNumero: IGeraBoletoBuilder;
-    function FormataCampoLivre: IGeraBoletoBuilder;
-    function FormataLinhaDigitavel: IGeraBoletoBuilder;
-    function FormataCodigoBarras: IGeraBoletoBuilder;
+    function FormataCampos: IFormataBoletoBuilder;
+    function ValidaDados: IFormataBoletoBuilder;
+    function FormataNossoNumero: IFormataBoletoBuilder;
+    function FormataCampoLivre: IFormataBoletoBuilder;
+    function FormataLinhaDigitavel: IFormataBoletoBuilder;
+    function FormataCodigoBarras: IFormataBoletoBuilder;
     procedure Criar;
   end;
 
@@ -94,34 +94,34 @@ begin
 
 end;
 
-function TBBFormata.FormataCampoLivre: IGeraBoletoBuilder;
+function TBBFormata.FormataCampoLivre: IFormataBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
-function TBBFormata.FormataCampos: IGeraBoletoBuilder;
+function TBBFormata.FormataCampos: IFormataBoletoBuilder;
 begin
   FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
   FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
   Result := Self;
 end;
 
-function TBBFormata.FormataCodigoBarras: IGeraBoletoBuilder;
+function TBBFormata.FormataCodigoBarras: IFormataBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
-function TBBFormata.FormataLinhaDigitavel: IGeraBoletoBuilder;
+function TBBFormata.FormataLinhaDigitavel: IFormataBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
-function TBBFormata.FormataNossoNumero: IGeraBoletoBuilder;
+function TBBFormata.FormataNossoNumero: IFormataBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
-function TBBFormata.ValidaDados: IGeraBoletoBuilder;
+function TBBFormata.ValidaDados: IFormataBoletoBuilder;
 begin
   if FBoleto.GetConta.Banco.Numero <> NUM_BANCO then
     raise Exception.Create('Número do Banco inválido!');

@@ -3,7 +3,7 @@ unit Boleto;
 interface
 
 uses
-  Pessoa, Conta, Titulo;
+  Pessoa, Conta, Titulo, Base;
 
 type
   IBoleto = interface
@@ -12,6 +12,7 @@ type
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
+    procedure GeraBoleto;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
@@ -21,30 +22,27 @@ type
     FConta: TConta;
     FPagador: TPessoa;
     FTitulo: TTitulo;
-
-    procedure Formatar; virtual; abstract;
-    procedure Validar; virtual; abstract;
   public
-    constructor Create();
+    constructor Create;
     destructor Destroy; override;
     function GetBeneficiario: TPessoa;
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
+
+    procedure GeraBoleto;
   end;
 
 implementation
 
 { TBoleto }
 
-constructor TBoleto.Create();
+constructor TBoleto.Create;
 begin
   FBeneficiario := TPessoa.Create;
   FConta := TConta.Create;
   FTitulo := TTitulo.Create;
   FPagador := TPessoa.Create;
-  Formatar;
-  Validar;
 end;
 
 destructor TBoleto.Destroy;
@@ -55,6 +53,14 @@ begin
   FPagador.Free;
 
   inherited;
+end;
+
+procedure TBoleto.GeraBoleto;
+var
+  Formater: I
+begin
+  Formatar;
+  Validar;
 end;
 
 function TBoleto.GetBeneficiario: TPessoa;

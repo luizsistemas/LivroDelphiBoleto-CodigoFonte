@@ -96,7 +96,7 @@ end;
 
 function TBBFormata.FormataCampoLivre: IGeraBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
 function TBBFormata.FormataCampos: IGeraBoletoBuilder;
@@ -108,17 +108,17 @@ end;
 
 function TBBFormata.FormataCodigoBarras: IGeraBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
 function TBBFormata.FormataLinhaDigitavel: IGeraBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
 function TBBFormata.FormataNossoNumero: IGeraBoletoBuilder;
 begin
-  Result := Self;
+
 end;
 
 function TBBFormata.ValidaDados: IGeraBoletoBuilder;

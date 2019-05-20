@@ -3,7 +3,7 @@ unit Boleto;
 interface
 
 uses
-  Pessoa, Conta, Titulo;
+  Pessoa, Conta, Titulo, Base;
 
 type
   IBoleto = interface
@@ -12,7 +12,7 @@ type
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
-    procedure Gerar;
+    procedure GeraBoleto;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
@@ -30,12 +30,10 @@ type
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
 
-    procedure Gerar;
+    procedure GeraBoleto;
   end;
 
 implementation
-
-uses Base, BoletoFactory;
 
 { TBoleto }
 
@@ -57,16 +55,10 @@ begin
   inherited;
 end;
 
-procedure TBoleto.Gerar;
+procedure TBoleto.GeraBoleto;
 begin
-  TBoletoFactory
-            .GetFormatter(Self)
-            .FormataCampos
-            .ValidaDados
-            .FormataNossoNumero
-            .FormataCampoLivre
-            .FormataCodigoBarras
-            .Criar;
+  Formatar;
+  Validar;
 end;
 
 function TBoleto.GetBeneficiario: TPessoa;

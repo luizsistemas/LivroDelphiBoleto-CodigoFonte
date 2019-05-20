@@ -35,7 +35,7 @@ type
 
 implementation
 
-uses Base, BoletoFactory;
+uses Base;
 
 { TBoleto }
 
@@ -58,15 +58,10 @@ begin
 end;
 
 procedure TBoleto.Gerar;
+var
+  Boleto: IGeraBoletoBuilder;
 begin
-  TBoletoFactory
-            .GetFormatter(Self)
-            .FormataCampos
-            .ValidaDados
-            .FormataNossoNumero
-            .FormataCampoLivre
-            .FormataCodigoBarras
-            .Criar;
+  Boleto :=
 end;
 
 function TBoleto.GetBeneficiario: TPessoa;

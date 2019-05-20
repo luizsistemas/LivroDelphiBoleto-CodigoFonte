@@ -22,9 +22,10 @@ uses
   Titulo in '..\Source\Titulo.pas',
   Boleto in '..\Source\Boleto.pas',
   Boleto001 in '..\Source\Boleto001.pas',
-  TestBoleto001 in 'TestBoleto001.pas',
+  TestBoleto in 'TestBoleto.pas',
   Funcoes in '..\Source\Funcoes.pas',
-  Base in '..\Source\Base.pas';
+  Base in '..\Source\Base.pas',
+  BoletoFactory in '..\Source\BoletoFactory.pas';
 
 {$R *.RES}
 
