@@ -25,7 +25,8 @@ type
     procedure Formatar; virtual; abstract;
     procedure Validar; virtual; abstract;
   public
-    constructor Create(ABeneficiario: TPessoa; AConta: TConta; ATitulo: TTitulo; APagador: TPessoa);
+    constructor Create();
+    destructor Destroy; override;
     function GetBeneficiario: TPessoa;
     function GetConta: TConta;
     function GetPagador: TPessoa;
@@ -36,14 +37,24 @@ implementation
 
 { TBoleto }
 
-constructor TBoleto.Create(ABeneficiario: TPessoa; AConta: TConta; ATitulo: TTitulo; APagador: TPessoa);
+constructor TBoleto.Create();
 begin
-  FBeneficiario := ABeneficiario;
-  FConta := AConta;
-  FTitulo := ATitulo;
-  FPagador := APagador;
+  FBeneficiario := TPessoa.Create;
+  FConta := TConta.Create;
+  FTitulo := TTitulo.Create;
+  FPagador := TPessoa.Create;
   Formatar;
   Validar;
+end;
+
+destructor TBoleto.Destroy;
+begin
+  FBeneficiario.Free;
+  FConta.Free;
+  FTitulo.Free;
+  FPagador.Free;
+
+  inherited;
 end;
 
 function TBoleto.GetBeneficiario: TPessoa;

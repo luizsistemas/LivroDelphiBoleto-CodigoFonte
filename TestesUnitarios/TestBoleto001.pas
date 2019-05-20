@@ -8,10 +8,10 @@ uses
 type
   TestTBoleto001 = class(TTestCase)
   strict private
-    FBeneficiario: IPessoa;
-    FConta: IConta;
-    FTitulo: ITitulo;
-    FPagador: IPessoa;
+    FBeneficiario: TPessoa;
+    FConta: TConta;
+    FTitulo: TTitulo;
+    FPagador: TPessoa;
     FBoleto001: IBoleto;
 
     procedure SetDadosPadrao;
@@ -74,7 +74,10 @@ end;
 
 procedure TestTBoleto001.TearDown;
 begin
-  // não precisamos mais destruir FBoleto, pois este agora é do tipo interface
+  FBeneficiario.Free;
+  FConta.Free;
+  FTitulo.Free;
+  FPagador.Free;
 end;
 
 procedure TestTBoleto001.TestDigitoAgencia;

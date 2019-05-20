@@ -3,40 +3,7 @@ unit Titulo;
 interface
 
 type
-  ITitulo = interface
-    ['{15429303-AC39-431C-BE0E-1FC13339B82C}']
-    function GetAceite: string;
-    function GetDataProc: TDate;
-    function GetVencto: TDate;
-    function GetDocumento: string;
-    function GetEmissao: TDate;
-    function GetEspecDoc: string;
-    function GetEspecMoeda: string;
-    function GetNossoNum: string;
-    function GetValor: Currency;
-
-    procedure SetAceite(const Value: string);
-    procedure SetDataProc(const Value: TDate);
-    procedure SetVencto(const Value: TDate);
-    procedure SetDocumento(const Value: string);
-    procedure SetEmissao(const Value: TDate);
-    procedure SetEspecDoc(const Value: string);
-    procedure SetEspecMoeda(const Value: string);
-    procedure SetNossoNum(const Value: string);
-    procedure SetValor(const Value: Currency);
-
-    property Emissao: TDate read GetEmissao write SetEmissao;
-    property Vencto: TDate read GetVencto write SetVencto;
-    property Documento: string read GetDocumento write SetDocumento;
-    property EspecMoeda: string read GetEspecMoeda write SetEspecMoeda;
-    property EspecDoc: string read GetEspecDoc write SetEspecDoc;
-    property Aceite: string read GetAceite write SetAceite;
-    property DataProc: TDate read GetDataProc write SetDataProc;
-    property NossoNum: string read GetNossoNum write SetNossoNum;
-    property Valor: Currency read GetValor write SetValor;
-  end;
-
-  TTitulo = class(TInterfacedObject, ITitulo)
+  TTitulo = class
   private
     FNossoNum: string;
     FEspecMoeda: string;
@@ -47,146 +14,18 @@ type
     FEmissao: TDate;
     FVencto: TDate;
     FDataProc: TDate;
-
-    function GetAceite: string;
-    function GetDataProc: TDate;
-    function GetVencto: TDate;
-    function GetDocumento: string;
-    function GetEmissao: TDate;
-    function GetEspecDoc: string;
-    function GetEspecMoeda: string;
-    function GetNossoNum: string;
-    function GetValor: Currency;
-
-    procedure SetAceite(const Value: string);
-    procedure SetDataProc(const Value: TDate);
-    procedure SetVencto(const Value: TDate);
-    procedure SetDocumento(const Value: string);
-    procedure SetEmissao(const Value: TDate);
-    procedure SetEspecDoc(const Value: string);
-    procedure SetEspecMoeda(const Value: string);
-    procedure SetNossoNum(const Value: string);
-    procedure SetValor(const Value: Currency);
   public
-    property Emissao: TDate read GetEmissao write SetEmissao;
-    property Vencto: TDate read GetVencto write SetVencto;
-    property Documento: string read GetDocumento write SetDocumento;
-    property EspecMoeda: string read GetEspecMoeda write SetEspecMoeda;
-    property EspecDoc: string read GetEspecDoc write SetEspecDoc;
-    property Aceite: string read GetAceite write SetAceite;
-    property DataProc: TDate read GetDataProc write SetDataProc;
-    property NossoNum: string read GetNossoNum write SetNossoNum;
-    property Valor: Currency read GetValor write SetValor;
+    property Emissao: TDate read FEmissao write FEmissao;
+    property Vencto: TDate read FVencto write FVencto;
+    property Documento: string read FDocumento write FDocumento;
+    property EspecMoeda: string read FEspecMoeda write FEspecMoeda;
+    property EspecDoc: string read FEspecDoc write FEspecDoc;
+    property Aceite: string read FAceite write FAceite;
+    property DataProc: TDate read FDataProc write FDataProc;
+    property NossoNum: string read FNossoNum write FNossoNum;
+    property Valor: Currency read FValor write FValor;
   end;
 
 implementation
-
-{ TTitulo }
-
-function TTitulo.GetAceite: string;
-begin
-  Result := FAceite;
-end;
-
-function TTitulo.GetDataProc: TDate;
-begin
-  Result := FDataProc;
-
-end;
-
-function TTitulo.GetVencto: TDate;
-begin
-  Result := FVencto;
-
-end;
-
-function TTitulo.GetDocumento: string;
-begin
-  Result := FDocumento;
-
-end;
-
-function TTitulo.GetEmissao: TDate;
-begin
-  Result := FEmissao;
-
-end;
-
-function TTitulo.GetEspecDoc: string;
-begin
-  Result := FEspecDoc;
-
-end;
-
-function TTitulo.GetEspecMoeda: string;
-begin
-  Result := FEspecMoeda;
-
-end;
-
-function TTitulo.GetNossoNum: string;
-begin
-  Result := FNossoNum;
-
-end;
-
-function TTitulo.GetValor: Currency;
-begin
-  Result := FValor;
-
-end;
-
-procedure TTitulo.SetAceite(const Value: string);
-begin
-  FAceite := Value;
-end;
-
-procedure TTitulo.SetDataProc(const Value: TDate);
-begin
-  FDataProc := Value;
-
-end;
-
-procedure TTitulo.SetVencto(const Value: TDate);
-begin
-  FVencto := Value;
-
-end;
-
-procedure TTitulo.SetDocumento(const Value: string);
-begin
-  FDocumento := Value;
-
-end;
-
-procedure TTitulo.SetEmissao(const Value: TDate);
-begin
-  FEmissao := Value;
-
-end;
-
-procedure TTitulo.SetEspecDoc(const Value: string);
-begin
-  FEspecDoc := Value;
-
-end;
-
-procedure TTitulo.SetEspecMoeda(const Value: string);
-begin
-  FEspecMoeda := Value;
-
-end;
-
-procedure TTitulo.SetNossoNum(const Value: string);
-begin
-  FNossoNum := Value;
-
-end;
-
-procedure TTitulo.SetValor(const Value: Currency);
-begin
-  FValor := Value;
-
-end;
 
 end.

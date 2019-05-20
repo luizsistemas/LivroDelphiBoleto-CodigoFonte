@@ -26,6 +26,7 @@ type
     procedure Validar; virtual; abstract;
   public
     constructor Create(ABeneficiario: TPessoa; AConta: TConta; ATitulo: TTitulo; APagador: TPessoa);
+    destructor Destroy; override;
     function GetBeneficiario: TPessoa;
     function GetConta: TConta;
     function GetPagador: TPessoa;
