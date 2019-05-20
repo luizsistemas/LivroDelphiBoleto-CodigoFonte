@@ -20,11 +20,16 @@ uses
   Conta in '..\Source\Conta.pas',
   Pessoa in '..\Source\Pessoa.pas',
   Titulo in '..\Source\Titulo.pas',
-  Boleto in '..\Source\Boleto.pas';
+  Boleto in '..\Source\Boleto.pas',
+  Boleto001 in '..\Source\Boleto001.pas',
+  TestBoleto001 in 'TestBoleto001.pas',
+  Funcoes in '..\Source\Funcoes.pas',
+  Base in '..\Source\Base.pas';
 
 {$R *.RES}
 
 begin
+  ReportMemoryLeaksOnShutdown := DebugHook <> 0;
   DUnitTestRunner.RunRegisteredTests;
 end.
 

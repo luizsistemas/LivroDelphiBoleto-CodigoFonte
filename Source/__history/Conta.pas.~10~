@@ -15,7 +15,6 @@ type
     function GetDigitoAgencia: string;
     function GetDigitoConta: string;
     function GetLocalPagto: string;
-    function GetConvenio: string;
 
     procedure SetAgencia(const Value: string);
     procedure SetBanco(const Value: TBanco);
@@ -24,7 +23,6 @@ type
     procedure SetDigitoAgencia(const Value: string);
     procedure SetDigitoConta(const Value: string);
     procedure SetLocalPagto(const Value: string);
-    procedure SetConvenio(const Value: string);
 
     property Banco: TBanco read GetBanco write SetBanco;
     property LocalPagto: string read GetLocalPagto write SetLocalPagto;
@@ -33,7 +31,6 @@ type
     property Conta: string read GetConta write SetConta;
     property DigitoConta: string read GetDigitoConta write SetDigitoConta;
     property Carteira: string read GetCarteira write SetCarteira;
-    property Convenio: string read GetConvenio write SetConvenio;
   end;
 
   TConta = class(TInterfacedObject, IConta)
@@ -45,7 +42,6 @@ type
     FConta: string;
     FCarteira: string;
     FDigitoAgencia: string;
-    FConvenio: string;
 
   public
     constructor Create;
@@ -58,7 +54,6 @@ type
     function GetDigitoAgencia: string;
     function GetDigitoConta: string;
     function GetLocalPagto: string;
-    function GetConvenio: string;
 
     procedure SetAgencia(const Value: string);
     procedure SetBanco(const Value: TBanco);
@@ -67,7 +62,6 @@ type
     procedure SetDigitoAgencia(const Value: string);
     procedure SetDigitoConta(const Value: string);
     procedure SetLocalPagto(const Value: string);
-    procedure SetConvenio(const Value: string);
 
     property Banco: TBanco read GetBanco write SetBanco;
     property LocalPagto: string read GetLocalPagto write SetLocalPagto;
@@ -76,7 +70,6 @@ type
     property Conta: string read GetConta write SetConta;
     property DigitoConta: string read GetDigitoConta write SetDigitoConta;
     property Carteira: string read GetCarteira write SetCarteira;
-    property Convenio: string read GetConvenio write SetConvenio;
   end;
 
 implementation
@@ -114,11 +107,6 @@ begin
   Result := FConta;
 end;
 
-function TConta.GetConvenio: string;
-begin
-  Result := FConvenio;
-end;
-
 function TConta.GetDigitoAgencia: string;
 begin
   Result := FDigitoAgencia;
@@ -136,7 +124,7 @@ end;
 
 procedure TConta.SetAgencia(const Value: string);
 begin
-  FAgencia := Trim(Value);
+  FAgencia := Value;
 end;
 
 procedure TConta.SetBanco(const Value: TBanco);
@@ -151,12 +139,7 @@ end;
 
 procedure TConta.SetConta(const Value: string);
 begin
-  FConta := Trim(Value);
-end;
-
-procedure TConta.SetConvenio(const Value: string);
-begin
-  FConvenio := Trim(Value);
+  FConta := Value;
 end;
 
 procedure TConta.SetDigitoAgencia(const Value: string);
@@ -166,7 +149,7 @@ end;
 
 procedure TConta.SetDigitoConta(const Value: string);
 begin
-  FDigitoConta := Trim(Value);
+  FDigitoConta := Value;
 end;
 
 procedure TConta.SetLocalPagto(const Value: string);

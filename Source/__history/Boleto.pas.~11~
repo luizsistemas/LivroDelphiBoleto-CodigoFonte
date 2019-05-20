@@ -1,0 +1,81 @@
+unit Boleto;
+
+interface
+
+uses
+  Pessoa, Conta, Titulo;
+
+type
+  IBoleto = interface
+    ['{824360BB-E02F-4F7B-9DCE-D4A58B23C79F}']
+    function GetBeneficiario: IPessoa;
+    function GetConta: IConta;
+    function GetPagador: IPessoa;
+    function GetTitulo: ITitulo;
+
+    property Beneficiario: IPessoa read GetBeneficiario;
+    property Conta: IConta read GetConta;
+    property Titulo: ITitulo read GetTitulo;
+    property Pagador: IPessoa read GetPagador;
+  end;
+
+  TBoleto = class(TInterfacedObject, IBoleto)
+  private
+    FTitulo: ITitulo;
+    FBeneficiario: IPessoa;
+    FConta: IConta;
+    FPagador: IPessoa;
+  public
+    constructor Create(ABeneficiario: IPessoa; AConta: IConta; ATitulo: ITitulo; APagador: IPessoa);
+
+    function GetBeneficiario: IPessoa;
+    function GetConta: IConta;
+    function GetPagador: IPessoa;
+    function GetTitulo: ITitulo;
+
+    property Beneficiario: IPessoa read GetBeneficiario;
+    property Conta: IConta read GetConta;
+    property Titulo: ITitulo read GetTitulo;
+    property Pagador: IPessoa read GetPagador;
+  end;
+
+  TBanco001 = class(TBoleto)
+  private
+    FConvenio: string;
+  public
+    property Conenio: string read FConvenio write FConvenio;
+  end;
+
+implementation
+
+{ TBoleto }
+
+constructor TBoleto.Create(ABeneficiario: IPessoa; AConta: IConta; ATitulo: ITitulo; APagador: IPessoa);
+begin
+  FBeneficiario := ABeneficiario;
+  FConta := AConta;
+  FTitulo := ATitulo;
+  FPagador := APagador;
+end;
+
+function TBoleto.GetBeneficiario: IPessoa;
+begin
+  Result := FBeneficiario;
+end;
+
+function TBoleto.GetConta: IConta;
+begin
+  Result := FConta;
+end;
+
+function TBoleto.GetPagador: IPessoa;
+begin
+  Result := FPagador;
+end;
+
+function TBoleto.GetTitulo: ITitulo;
+begin
+  Result := FTitulo;
+end;
+
+end.

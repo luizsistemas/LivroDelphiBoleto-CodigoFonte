@@ -1,0 +1,17 @@
+unit Funcoes;
+
+interface
+
+uses
+  SysUtils, StrUtils;
+
+  function LeftPad(Value: String; Length: Integer; Pad: Char='0'): string;
+
+implementation
+
+function LeftPad(Value: String; Length: Integer; Pad: Char='0'): string;
+begin
+  Result := RightStr(StringOfChar(Pad,Length) + IntToStr(Value), Length );
+end;
+
+end.

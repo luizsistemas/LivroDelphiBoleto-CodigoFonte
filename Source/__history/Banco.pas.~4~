@@ -9,10 +9,9 @@ type
     FDigitoNumero: string;
     FNumero: string;
     procedure SetNumero(const Value: string);
-    procedure SetDigitoNumero(const Value: string);
   public
     property Numero: string read FNumero write SetNumero;
-    property DigitoNumero: string read FDigitoNumero write SetDigitoNumero;
+    property DigitoNumero: string read FDigitoNumero write FDigitoNumero;
     property Nome: string read FNome write FNome;
   end;
 
@@ -22,11 +21,6 @@ implementation
 
 uses
   Sysutils;
-
-procedure TBanco.SetDigitoNumero(const Value: string);
-begin
-  FDigitoNumero := Trim(Value);
-end;
 
 procedure TBanco.SetNumero(const Value: string);
 begin

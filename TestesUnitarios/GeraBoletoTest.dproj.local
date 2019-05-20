@@ -5,11 +5,45 @@
     <Transaction>2019/05/13 16:45:20.000.286,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas=F:\Cursos\Boleto\GeraBoletos\Source\Banco.pas</Transaction>
     <Transaction>2019/05/13 17:22:20.000.763,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
     <Transaction>2019/05/13 17:22:31.000.883,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas=F:\Cursos\Boleto\GeraBoletos\Source\Conta.pas</Transaction>
-    <Transaction>2019/05/14 08:01:28.487,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
-    <Transaction>2019/05/14 08:01:38.898,F:\Cursos\Boleto\GeraBoletos\Source\Pessoa.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
-    <Transaction>2019/05/14 08:10:12.826,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
-    <Transaction>2019/05/14 08:10:28.826,F:\Cursos\Boleto\GeraBoletos\Source\Titulo.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
-    <Transaction>2019/05/14 08:52:25.693,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
-    <Transaction>2019/05/14 08:52:38.533,F:\Cursos\Boleto\GeraBoletos\Source\Boleto.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:01:28.000.487,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:01:38.000.898,F:\Cursos\Boleto\GeraBoletos\Source\Pessoa.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:10:12.000.826,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:10:28.000.826,F:\Cursos\Boleto\GeraBoletos\Source\Titulo.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:52:25.000.693,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 08:52:38.000.533,F:\Cursos\Boleto\GeraBoletos\Source\Boleto.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/14 10:46:58.000.741,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/14 16:51:30.000.065,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas=</Transaction>
+    <Transaction>2019/05/14 16:57:10.000.170,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestConta.pas</Transaction>
+    <Transaction>2019/05/14 18:42:05.000.958,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBanco.pas</Transaction>
+    <Transaction>2019/05/16 09:19:50.000.229,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/16 09:30:20.000.972,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/16 10:53:38.000.944,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas=</Transaction>
+    <Transaction>2019/05/16 10:54:19.000.224,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/16 10:58:42.000.662,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas=</Transaction>
+    <Transaction>2019/05/16 11:00:39.000.514,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/16 11:16:04.000.063,F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas=</Transaction>
+    <Transaction>2019/05/16 11:18:10.000.753,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/16 11:18:44.000.340,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto.pas</Transaction>
+    <Transaction>2019/05/16 17:46:45.000.002,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/16 17:46:57.000.569,F:\Cursos\Boleto\GeraBoletos\Source\Boleto001.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/16 18:22:14.000.276,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/16 18:25:42.000.296,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\TestBoleto001.pas</Transaction>
+    <Transaction>2019/05/18 10:35:53.000.589,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/18 10:36:15.000.740,F:\Cursos\Boleto\GeraBoletos\Source\Funcoes.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/19 09:16:37.353,=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
+    <Transaction>2019/05/19 09:16:49.890,F:\Cursos\Boleto\GeraBoletos\Source\Base.pas=F:\Cursos\Boleto\GeraBoletos\TestesUnitarios\Unit1.pas</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\GeraBoletos"/>
+    <File Path="..\Source"/>
+    <File Path="..\Source\Banco.pas"/>
+    <File Path="..\Source\Boleto.pas"/>
+    <File Path="..\Source\Boleto001.pas"/>
+    <File Path="..\Source\Conta.pas"/>
+    <File Path="..\Source\Funcoes.pas"/>
+    <File Path="..\Source\Pessoa.pas"/>
+    <File Path="..\Source\Titulo.pas"/>
+    <File Path="..\Source\Base.pas"/>
+    <File Path="TestBoleto001.pas"/>
+  </ProjectSortOrder>
 </BorlandProject>

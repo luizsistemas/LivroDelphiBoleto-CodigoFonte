@@ -1,0 +1,75 @@
+unit Boleto001;
+
+interface
+
+uses Boleto, Pessoa, Conta, Titulo;
+
+const
+  NUM_BANCO = '001';
+
+type
+  TBoleto001 = class(TInterfacedObject, IBoleto)
+  private
+    FBeneficiario: IPessoa;
+    FConta: IConta;
+    FTitulo: ITitulo;
+    FPagador: IPessoa;
+    procedure Validar;
+    procedure Formatar;
+  public
+    constructor Create(ABeneficiario: IPessoa; AConta: IConta; ATitulo: ITitulo; APagador: IPessoa);
+    function GetBeneficiario: IPessoa;
+    function GetConta: IConta;
+    function GetPagador: IPessoa;
+    function GetTitulo: ITitulo;
+  end;
+
+implementation
+
+uses
+  System.SysUtils;
+
+{ TBoleto001 }
+
+constructor TBoleto001.Create(ABeneficiario: IPessoa; AConta: IConta; ATitulo: ITitulo;
+  APagador: IPessoa);
+begin
+  FBeneficiario := ABeneficiario;
+  FConta := AConta;
+  FTitulo := ATitulo;
+  FPagador := APagador;
+  Validar;
+end;
+
+procedure TBoleto001.Validar;
+begin
+  if FConta.Banco.Numero <> NUM_BANCO then
+    raise Exception.Create('Número do Banco inválido!');
+end;
+
+procedure TBoleto001.Formatar;
+begin
+  FConta.Agencia :=
+end;
+
+function TBoleto001.GetBeneficiario: IPessoa;
+begin
+  Result := FBeneficiario;
+end;
+
+function TBoleto001.GetConta: IConta;
+begin
+  Result := FConta;
+end;
+
+function TBoleto001.GetPagador: IPessoa;
+begin
+  Result := FPagador;
+end;
+
+function TBoleto001.GetTitulo: ITitulo;
+begin
+  Result := FTitulo;
+end;
+
+end.

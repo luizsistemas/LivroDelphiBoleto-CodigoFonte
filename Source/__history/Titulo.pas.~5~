@@ -4,7 +4,6 @@ interface
 
 type
   ITitulo = interface
-    ['{15429303-AC39-431C-BE0E-1FC13339B82C}']
     function GetAceite: string;
     function GetDataProc: TDate;
     function GetVencto: TDate;

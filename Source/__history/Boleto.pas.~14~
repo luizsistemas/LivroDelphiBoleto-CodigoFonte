@@ -12,6 +12,7 @@ type
     function GetConta: IConta;
     function GetPagador: IPessoa;
     function GetTitulo: ITitulo;
+    procedure Gera;
   end;
 
 implementation

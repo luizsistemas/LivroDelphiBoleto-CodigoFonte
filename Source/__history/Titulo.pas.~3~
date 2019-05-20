@@ -4,10 +4,9 @@ interface
 
 type
   ITitulo = interface
-    ['{15429303-AC39-431C-BE0E-1FC13339B82C}']
     function GetAceite: string;
     function GetDataProc: TDate;
-    function GetVencto: TDate;
+    function GetDate: TDate;
     function GetDocumento: string;
     function GetEmissao: TDate;
     function GetEspecDoc: string;
@@ -17,7 +16,7 @@ type
 
     procedure SetAceite(const Value: string);
     procedure SetDataProc(const Value: TDate);
-    procedure SetVencto(const Value: TDate);
+    procedure SetDate(const Value: TDate);
     procedure SetDocumento(const Value: string);
     procedure SetEmissao(const Value: TDate);
     procedure SetEspecDoc(const Value: string);
@@ -26,7 +25,7 @@ type
     procedure SetValor(const Value: Currency);
 
     property Emissao: TDate read GetEmissao write SetEmissao;
-    property Vencto: TDate read GetVencto write SetVencto;
+    property Vencto: TDate read GetDate write SetDate;
     property Documento: string read GetDocumento write SetDocumento;
     property EspecMoeda: string read GetEspecMoeda write SetEspecMoeda;
     property EspecDoc: string read GetEspecDoc write SetEspecDoc;
