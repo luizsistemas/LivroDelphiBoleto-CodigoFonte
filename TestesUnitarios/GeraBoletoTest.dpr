@@ -25,7 +25,7 @@ uses
   TestBoleto in 'TestBoleto.pas',
   Funcoes in '..\Source\Funcoes.pas',
   Base in '..\Source\Base.pas',
-  BoletoFactory in '..\Source\BoletoFactory.pas';
+  FactoryBoleto in '..\Source\FactoryBoleto.pas';
 
 {$R *.RES}
 

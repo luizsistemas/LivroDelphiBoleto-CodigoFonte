@@ -10,9 +10,9 @@ type
     function ValidaDados: IGeraBoletoBuilder;
     function FormataNossoNumero: IGeraBoletoBuilder;
     function FormataCampoLivre: IGeraBoletoBuilder;
-    function FormataCodigoBarras: IGeraBoletoBuilder;
     function FormataLinhaDigitavel: IGeraBoletoBuilder;
-    function Criar: Boolean;
+    function FormataCodigoBarras: IGeraBoletoBuilder;
+    procedure Criar;
   end;
 
   IFormataNossoNumero = interface

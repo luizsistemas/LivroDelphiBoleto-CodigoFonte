@@ -100,7 +100,7 @@ end;
 
 function TFormata001.FormataCampos: IGeraBoletoBuilder;
 begin
-  FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
+ // FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
 //  FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
   Result := Self;
 end;

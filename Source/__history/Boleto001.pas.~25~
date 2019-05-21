@@ -5,10 +5,11 @@ interface
 uses Boleto, Pessoa, Conta, Titulo, Base;
 
 const
+  NUM_BANCO = '001';
   DIGITO_NUM = '9';
 
 type
-  TFormata001 = class(TInterfacedObject, IGeraBoletoBuilder)
+  TBBFormata = class(TInterfacedObject, IGeraBoletoBuilder)
   private
     FBoleto: IBoleto;
   public
@@ -19,7 +20,7 @@ type
     function FormataCampoLivre: IGeraBoletoBuilder;
     function FormataLinhaDigitavel: IGeraBoletoBuilder;
     function FormataCodigoBarras: IGeraBoletoBuilder;
-    function Criar: Boolean;
+    procedure Criar;
   end;
 
   TFactoryBBFormataNossoNumero = class
@@ -83,53 +84,55 @@ end;
 
 { TBBFormata }
 
-constructor TFormata001.Create(ABoleto: IBoleto);
+constructor TBBFormata.Create(ABoleto: IBoleto);
 begin
   FBoleto := ABoleto;
 end;
 
-function TFormata001.Criar: Boolean;
+procedure TBBFormata.Criar;
 begin
-  Result := True;
+
 end;
 
-function TFormata001.FormataCampoLivre: IGeraBoletoBuilder;
+function TBBFormata.FormataCampoLivre: IGeraBoletoBuilder;
 begin
   Result := Self;
 end;
 
-function TFormata001.FormataCampos: IGeraBoletoBuilder;
+function TBBFormata.FormataCampos: IGeraBoletoBuilder;
 begin
   FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
-//  FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
+  FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
   Result := Self;
 end;
 
-function TFormata001.FormataCodigoBarras: IGeraBoletoBuilder;
+function TBBFormata.FormataCodigoBarras: IGeraBoletoBuilder;
 begin
   Result := Self;
 end;
 
-function TFormata001.FormataLinhaDigitavel: IGeraBoletoBuilder;
+function TBBFormata.FormataLinhaDigitavel: IGeraBoletoBuilder;
 begin
   Result := Self;
 end;
 
-function TFormata001.FormataNossoNumero: IGeraBoletoBuilder;
+function TBBFormata.FormataNossoNumero: IGeraBoletoBuilder;
 begin
   Result := Self;
 end;
 
-function TFormata001.ValidaDados: IGeraBoletoBuilder;
+function TBBFormata.ValidaDados: IGeraBoletoBuilder;
 begin
+  if FBoleto.GetConta.Banco.Numero <> NUM_BANCO then
+    raise Exception.Create('Número do Banco inválido!');
   if FBoleto.GetConta.Banco.DigitoNumero <> DIGITO_NUM then
     raise Exception.Create('Dígito do Número do Banco inválido!');
-//  if FBoleto.GetConta.DigitoAgencia.Length > 1 then
-//    raise Exception.Create('Dígito da Agência inválido!');
-//  if not IsNumber( FBoleto.GetConta.Conta ) then
-//    raise Exception.Create('Número da Conta inválido!');
-//  if FBoleto.GetConta.DigitoConta.Length > 1 then
-//    raise Exception.Create('Dígito da Conta inválido!');
+  if FBoleto.GetConta.DigitoAgencia.Length > 1 then
+    raise Exception.Create('Dígito da Agência inválido!');
+  if not IsNumber( FBoleto.GetConta.Conta ) then
+    raise Exception.Create('Número da Conta inválido!');
+  if FBoleto.GetConta.DigitoConta.Length > 1 then
+    raise Exception.Create('Dígito da Conta inválido!');
   Result := Self;
 end;
 

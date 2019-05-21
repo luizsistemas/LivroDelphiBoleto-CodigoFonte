@@ -92,7 +92,7 @@
         <DCCReference Include="TestBoleto.pas"/>
         <DCCReference Include="..\Source\Funcoes.pas"/>
         <DCCReference Include="..\Source\Base.pas"/>
-        <DCCReference Include="..\Source\BoletoFactory.pas"/>
+        <DCCReference Include="..\Source\FactoryBoleto.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

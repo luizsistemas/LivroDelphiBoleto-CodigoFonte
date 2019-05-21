@@ -35,7 +35,7 @@ type
 
 implementation
 
-uses Base, FactoryBoleto;
+uses Base, BoletoFactory;
 
 { TBoleto }
 
@@ -59,7 +59,7 @@ end;
 
 procedure TBoleto.Gerar;
 begin
-  TFactoryBoleto
+  TBoletoFactory
             .GetFormatter(Self)
             .FormataCampos
             .ValidaDados

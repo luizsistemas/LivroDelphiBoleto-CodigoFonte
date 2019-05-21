@@ -1,0 +1,38 @@
+unit FactoryBoleto;
+
+interface
+
+uses
+  SysUtils, Boleto, Base, Funcoes;
+
+type
+  TFactoryBoleto = class
+  public
+    class function GetFormatter(ABoleto: IBoleto): IGeraBoletoBuilder;
+  end;
+
+implementation
+
+
+uses
+  Boleto001;
+
+{ TBoletoFactory }
+
+class function TFactoryBoleto.GetFormatter(ABoleto: IBoleto): IGeraBoletoBuilder;
+begin
+  try
+    case ABoleto.GetConta.Banco.Numero.ToInteger of
+      1: Result := TFormata001.Create(ABoleto);
+    else
+      raise Exception.Create('Banco não implementado!');
+    end;
+  except
+    on E: Exception do
+    begin
+       Application.MessageBox(Pchar(Texto), 'Lukas Sistemas', Botao);('Número do Banco inválido: ' + E.Message);
+    end;
+  end;
+end;
+
+end.
