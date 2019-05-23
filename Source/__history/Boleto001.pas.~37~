@@ -5,19 +5,18 @@ interface
 uses Boleto, Pessoa, Conta, Titulo, Base;
 
 const
-  NUM_BANCO = '001';
   DIGITO_NUM = '9';
 
 type
   TFormata001 = class(TInterfacedObject, IGeraBoletoBuilder)
   private
+    FCampoLivre: string;
     FBoleto: IBoleto;
   public
     constructor Create(ABoleto: IBoleto);
     function FormataCampos: IGeraBoletoBuilder;
     function ValidaDados: IGeraBoletoBuilder;
     function FormataNossoNumero: IGeraBoletoBuilder;
-    function FormataCampoLivre: IGeraBoletoBuilder;
     function FormataLinhaDigitavel: IGeraBoletoBuilder;
     function FormataCodigoBarras: IGeraBoletoBuilder;
     function Criar: Boolean;
@@ -30,17 +29,17 @@ type
 
   TBBConvenio4 = class(TInterfacedObject, IFormataNossoNumero)
   public
-    procedure Formata(ABoleto: IBoleto);
+    procedure Formata(ABoleto: IBoleto; var ACampoLivre: string);
   end;
 
   TBBConvenio6 = class(TInterfacedObject, IFormataNossoNumero)
   public
-    procedure Formata(ABoleto: IBoleto);
+    procedure Formata(ABoleto: IBoleto; var ACampoLivre: string);
   end;
 
   TBBConvenio7 = class(TInterfacedObject, IFormataNossoNumero)
   public
-    procedure Formata(ABoleto: IBoleto);
+    procedure Formata(ABoleto: IBoleto; var ACampoLivre: string);
   end;
 
 implementation
@@ -57,27 +56,30 @@ begin
     6: Result := TBBConvenio6.Create;
     7: Result := TBBConvenio7.Create;
   else
-    raise Exception.Create('Formato do Convênio não definido!');
+    raise Exception.Create('Convênio inválido!');
   end;
 end;
 
 { TBBConvenio4 }
 
-procedure TBBConvenio4.Formata(ABoleto: IBoleto);
+procedure TBBConvenio4.Formata(ABoleto: IBoleto; var ACampoLivre: string);
 begin
-
+  ABoleto.GetTitulo.NossoNum :=
+    ABoleto.GetConta.Convenio +
+      LeftPad(ABoleto.GetConta.SeqNossoNumero, 7);
+  ACampoLivre :=
 end;
 
 { TBBConvenio6 }
 
-procedure TBBConvenio6.Formata(ABoleto: IBoleto);
+procedure TBBConvenio6.Formata(ABoleto: IBoleto; var ACampoLivre: string);
 begin
 
 end;
 
 { TBBConvenio7 }
 
-procedure TBBConvenio7.Formata(ABoleto: IBoleto);
+procedure TBBConvenio7.Formata(ABoleto: IBoleto; var ACampoLivre: string);
 begin
 
 end;
@@ -92,11 +94,6 @@ end;
 function TFormata001.Criar: Boolean;
 begin
   Result := True;
-end;
-
-function TFormata001.FormataCampoLivre: IGeraBoletoBuilder;
-begin
-  Result := Self;
 end;
 
 function TFormata001.FormataCampos: IGeraBoletoBuilder;
@@ -123,16 +120,10 @@ end;
 
 function TFormata001.ValidaDados: IGeraBoletoBuilder;
 begin
-  if FBoleto.GetConta.Banco.Numero <> NUM_BANCO then
-    raise Exception.Create('Número do Banco inválido!');
   if FBoleto.GetConta.Banco.DigitoNumero <> DIGITO_NUM then
     raise Exception.Create('Dígito do Número do Banco inválido!');
-  if FBoleto.GetConta.DigitoAgencia.Length > 1 then
-    raise Exception.Create('Dígito da Agência inválido!');
   if not IsNumber( FBoleto.GetConta.Conta ) then
     raise Exception.Create('Número da Conta inválido!');
-  if FBoleto.GetConta.DigitoConta.Length > 1 then
-    raise Exception.Create('Dígito da Conta inválido!');
   Result := Self;
 end;
 

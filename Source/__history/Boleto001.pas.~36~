@@ -29,17 +29,17 @@ type
 
   TBBConvenio4 = class(TInterfacedObject, IFormataNossoNumero)
   public
-    procedure Formata(ABoleto: IBoleto; var ACampoLivre: string);
+    procedure Formata(ABoleto: IBoleto);
   end;
 
   TBBConvenio6 = class(TInterfacedObject, IFormataNossoNumero)
   public
-    procedure Formata(ABoleto: IBoleto; var ACampoLivre: string);
+    procedure Formata(ABoleto: IBoleto);
   end;
 
   TBBConvenio7 = class(TInterfacedObject, IFormataNossoNumero)
   public
-    procedure Formata(ABoleto: IBoleto; var ACampoLivre: string);
+    procedure Formata(ABoleto: IBoleto);
   end;
 
 implementation
@@ -62,24 +62,21 @@ end;
 
 { TBBConvenio4 }
 
-procedure TBBConvenio4.Formata(ABoleto: IBoleto; var ACampoLivre: string);
+procedure TBBConvenio4.Formata(ABoleto: IBoleto);
 begin
-  ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
-      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 7);
-  ACampoLivre := ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Agencia +
-    ABoleto.GetConta.Conta + ABoleto.GetConta.Carteira;
+
 end;
 
 { TBBConvenio6 }
 
-procedure TBBConvenio6.Formata(ABoleto: IBoleto; var ACampoLivre: string);
+procedure TBBConvenio6.Formata(ABoleto: IBoleto);
 begin
 
 end;
 
 { TBBConvenio7 }
 
-procedure TBBConvenio7.Formata(ABoleto: IBoleto; var ACampoLivre: string);
+procedure TBBConvenio7.Formata(ABoleto: IBoleto);
 begin
 
 end;

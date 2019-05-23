@@ -20,13 +20,8 @@ type
       procedure TestNumeroDoBancoEhValido;
       procedure TestDigitoDoNumeroDoBancoInvalido;
       procedure TestFormatacaoDoNumeroDaAgencia;
-//    procedure TestFormatacaoDoNumeroDaAgencia;
-//    procedure TestDigitoAgencia;
-//    procedure TestDigitoAgenciaMaiorQueUmDigito;
-//    procedure TestFormatacaoDoNumeroDaConta;
-//    procedure TestNumeroDaContaComCarectereInvalido;
-//    procedure TestDigitoDaConta;
-//    procedure TestDigitoDaContaMaiorQueUmDigito;
+      procedure TestFormatacaoDoNumeroDaConta;
+      procedure TestNumeroDaContaComCarectereInvalido;
   end;
 
 implementation
@@ -89,34 +84,6 @@ begin
   StopExpectingException('Nenhuma exceção gerada quando número do banco contém letras ou símbolos');
 end;
 
-//procedure TestTBoleto.TestDigitoAgencia;
-//begin
-//  FBoleto.GetConta.DigitoAgencia := ' 1';
-//  CheckEquals('1', FBoleto.GetConta.DigitoAgencia, 'Dídigo agência inválido');
-//end;
-//
-//procedure TestTBoleto.TestDigitoAgenciaMaiorQueUmDigito;
-//begin
-//  StartExpectingException(exception);
-//  FBoleto.GetConta.DigitoAgencia := '14';
-//  FBoleto.Gerar;
-//  StopExpectingException('Nenhuma exceção gerada quando informado dígito da agência maior que um dígito');
-//end;
-//
-//procedure TestTBoleto.TestDigitoDaConta;
-//begin
-//  FBoleto.GetConta.DigitoConta := ' 1     ';
-//  CheckEquals('1', FBoleto.GetConta.DigitoConta, 'Dídigo da conta inválido');
-//end;
-//
-//procedure TestTBoleto.TestDigitoDaContaMaiorQueUmDigito;
-//begin
-//  StartExpectingException(exception);
-//  FBoleto.GetConta.DigitoConta := '18';
-//  FBoleto.Gerar;
-//  StopExpectingException('Nenhuma exceção gerada quando informado dígito da conta maior que um dígito');
-//end;
-//
 procedure TestTBoleto.TestDigitoDoNumeroDoBancoComEspacos;
 begin
   FBoleto.GetConta.Banco.DigitoNumero := ' 9 ';
@@ -138,21 +105,21 @@ begin
   CheckEquals('0123', FBoleto.GetConta.Agencia, 'Agência com formato inválido!');
 end;
 
-//procedure TestTBoleto.TestFormatacaoDoNumeroDaConta;
-//begin
-//  FBoleto.GetConta.Conta := '12345';
-//  FBoleto.Gerar;
-//  CheckEquals('00012345', FBoleto.GetConta.Conta, 'Formatação do número da conta inválido');
-//end;
-//
-//procedure TestTBoleto.TestNumeroDaContaComCarectereInvalido;
-//begin
-//  StartExpectingException(exception);
-//  FBoleto.GetConta.Conta := 'a123';
-//  FBoleto.Gerar;
-//  StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na conta');
-//end;
-//
+procedure TestTBoleto.TestFormatacaoDoNumeroDaConta;
+begin
+  FBoleto.GetConta.Conta := '12345';
+  FBoleto.Gerar;
+  CheckEquals('00012345', FBoleto.GetConta.Conta, 'Formatação do número da conta inválido');
+end;
+
+procedure TestTBoleto.TestNumeroDaContaComCarectereInvalido;
+begin
+  StartExpectingException(exception);
+  FBoleto.GetConta.Conta := 'a123';
+  FBoleto.Gerar;
+  StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na conta');
+end;
+
 
 initialization
   RegisterTest(TestTBoleto.Suite);

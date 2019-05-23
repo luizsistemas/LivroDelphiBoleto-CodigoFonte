@@ -12,6 +12,7 @@ type
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
+    procedure Gerar;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
@@ -21,29 +22,51 @@ type
     FConta: TConta;
     FPagador: TPessoa;
     FTitulo: TTitulo;
-
-    procedure Formatar; virtual; abstract;
-    procedure Validar; virtual; abstract;
   public
-    constructor Create(ABeneficiario: TPessoa; AConta: TConta; ATitulo: TTitulo; APagador: TPessoa);
+    constructor Create;
+    destructor Destroy; override;
     function GetBeneficiario: TPessoa;
     function GetConta: TConta;
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
+
+    procedure Gerar;
   end;
 
 implementation
 
+uses Base, FactoryBoleto;
+
 { TBoleto }
 
-constructor TBoleto.Create(ABeneficiario: TPessoa; AConta: TConta; ATitulo: TTitulo; APagador: TPessoa);
+constructor TBoleto.Create;
 begin
-  FBeneficiario := ABeneficiario;
-  FConta := AConta;
-  FTitulo := ATitulo;
-  FPagador := APagador;
-  Formatar;
-  Validar;
+  FBeneficiario := TPessoa.Create;
+  FConta := TConta.Create;
+  FTitulo := TTitulo.Create;
+  FPagador := TPessoa.Create;
+end;
+
+destructor TBoleto.Destroy;
+begin
+  FBeneficiario.Free;
+  FConta.Free;
+  FTitulo.Free;
+  FPagador.Free;
+
+  inherited;
+end;
+
+procedure TBoleto.Gerar;
+begin
+  TFactoryBoleto
+            .GetFormatter(Self)
+            .FormataCampos
+            .ValidaDados
+            .FormataNossoNumero
+            .FormataCampoLivre
+            .FormataCodigoBarras
+            .Criar;
 end;
 
 function TBoleto.GetBeneficiario: TPessoa;

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="pf6jtf1y3rl_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::57z41rpfs9t_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,100,151" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Titulo.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Titulo.TTitulo" />
+    </reference>
+    <reference referencedUin="design:view:::0nphb2war6t_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="129,1,100,151" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Banco.TBanco" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Banco.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::99jh9c1gq1j_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="248,1,151,166" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.IGeraBoletoBuilder" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.IFormataNossoNumero" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::ut4q4uvf3ts_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="229,180,213,211" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio7" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TFactoryBBFormataNossoNumero" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio6" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TFormata001" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio4" />
+    </reference>
+    <reference referencedUin="design:view:::s0i7866svct_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="90,180,131,151" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:FactoryBoleto.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:FactoryBoleto.TFactoryBoleto" />
+    </reference>
+    <reference referencedUin="design:view:::insvnox2egi_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="480,1,100,151" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Conta.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Conta.TConta" />
+    </reference>
+    <reference referencedUin="design:view:::kjxuqo1y72o_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="480,171,114,151" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:TestBoleto.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:TestBoleto.TestTBoleto" />
+    </reference>
+    <reference referencedUin="design:view:::fualyr9ou7l_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="480,341,142,134" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoletoTest.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::50nnfatcpcp_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="371,429,103,134" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Funcoes.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::ce0e3k2y4jh_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="262,429,100,168" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.IBoleto" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.TBoleto" />
+    </reference>
+    <reference referencedUin="design:view:::blk1wrp58ui_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="153,429,100,166" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Pessoa.TPessoa" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Pessoa.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Pessoa.TEndereco" />
+    </reference>
+    <reference referencedUin="design:view:::cj07pi2jd0n_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="44,429,100,102" />
+    </reference>
+  </view>
+</nodeSet>

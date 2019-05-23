@@ -64,7 +64,8 @@ end;
 
 procedure TBBConvenio4.Formata(ABoleto: IBoleto; var ACampoLivre: string);
 begin
-  ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
+  ABoleto.GetTitulo.NossoNum :=
+    ABoleto.GetConta.Convenio +
       LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 7);
   ACampoLivre := ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Agencia +
     ABoleto.GetConta.Conta + ABoleto.GetConta.Carteira;

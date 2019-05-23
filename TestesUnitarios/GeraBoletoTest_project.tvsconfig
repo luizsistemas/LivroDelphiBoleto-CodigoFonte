@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<TgConfig Version="3" SubLevelDisabled="False">
+  <Option Name="namespaceFolder.Banco" Type="System.String" Value="Banco" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Base" Type="System.String" Value="Base" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Titulo" Type="System.String" Value="Titulo" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.Namespace1" Type="System.String" Value="Namespace1" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.GeraBoleto" Type="System.String" Value="GeraBoleto" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.GeraBoletoTest" Type="System.String" Value="GeraBoletoTest" Category="General" IsBrowsable="False" />
+</TgConfig>

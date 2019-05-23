@@ -16,7 +16,6 @@ type
     FCarteira: string;
     FDigitoAgencia: string;
     FConvenio: string;
-    FSeqNossoNumero: Integer;
 
     procedure SetAgencia(const Value: string);
     procedure SetConta(const Value: string);
@@ -36,7 +35,6 @@ type
     property DigitoConta: string read FDigitoConta write SetDigitoConta;
     property Carteira: string read FCarteira write FCarteira;
     property Convenio: string read FConvenio write SetConvenio;
-    property SeqNossoNumero: Integer read FSeqNossoNumero write FSeqNossoNumero;
   end;
 
 implementation

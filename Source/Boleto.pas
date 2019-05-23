@@ -64,7 +64,6 @@ begin
             .FormataCampos
             .ValidaDados
             .FormataNossoNumero
-            .FormataCampoLivre
             .FormataCodigoBarras
             .Criar;
 end;

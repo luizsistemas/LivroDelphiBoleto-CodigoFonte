@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="cj07pi2jd0n_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Conta.TConta">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="375,772,133,418" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FBanco" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FLocalPagto" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FAgencia" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FDigitoConta" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FConta" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FCarteira" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FDigitoAgencia" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Conta.TConta.FConvenio" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.SetAgencia(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.SetConta(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.SetDigitoAgencia(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.SetDigitoConta(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.SetConvenio(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.Create()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Conta.TConta.Destroy()" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.Banco" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.LocalPagto" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.Agencia" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.DigitoAgencia" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.Conta" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.DigitoConta" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.Carteira" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Conta.TConta.Convenio" />
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Conta.TConta.FBanco">
+        <property name="sourceAnchor" value="375,928" />
+        <property name="targetAnchor" value="232,928" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Conta.TConta.Banco">
+        <property name="sourceAnchor" value="375,936" />
+        <property name="targetAnchor" value="232,936" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.IBoleto">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="369,481,163,141" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.IBoleto.GetBeneficiario()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.IBoleto.GetConta()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.IBoleto.GetPagador()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.IBoleto.GetTitulo()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.IBoleto.Gerar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.TBoleto">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="608,856,163,250" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Boleto.TBoleto.FBeneficiario" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Boleto.TBoleto.FConta" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Boleto.TBoleto.FPagador" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Boleto.TBoleto.FTitulo" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.Create()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.GetBeneficiario()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.GetConta()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.GetPagador()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.GetTitulo()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto.TBoleto.Gerar()" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:Boleto.TBoleto:Boleto.IBoleto">
+        <property name="sourceAnchor" value="625,856" />
+        <property name="targetAnchor" value="450,622" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Boleto.TBoleto.FConta">
+        <property name="sourceAnchor" value="608,981" />
+        <property name="targetAnchor" value="508,981" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Boleto.TBoleto.FPagador">
+        <property name="sourceAnchor" value="642,856" />
+        <property name="targetAnchor" value="642,678" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Boleto.TBoleto.FBeneficiario">
+        <property name="sourceAnchor" value="677,856" />
+        <property name="targetAnchor" value="677,678" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Boleto.TBoleto.FTitulo">
+        <property name="sourceAnchor" value="771,917" />
+        <property name="targetAnchor" value="1080,679" />
+        <property name="bendpoints" value="" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Banco.TBanco">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="100,840,132,193" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Banco.TBanco.FNome" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Banco.TBanco.FDigitoNumero" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Banco.TBanco.FNumero" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Banco.TBanco.SetNumero(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Banco.TBanco.SetDigitoNumero(System.string)" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Banco.TBanco.Numero" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Banco.TBanco.DigitoNumero" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Banco.TBanco.Nome" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TFormata001">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,441,259,220" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Boleto001.TFormata001.FBoleto" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.Create(Boleto.IBoleto)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.FormataCampos()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.ValidaDados()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.FormataNossoNumero()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.FormataCampoLivre()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.FormataLinhaDigitavel()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.FormataCodigoBarras()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFormata001.Criar()" />
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Boleto001.TFormata001.FBoleto">
+        <property name="sourceAnchor" value="269,551" />
+        <property name="targetAnchor" value="369,551" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:Boleto001.TFormata001:Base.IGeraBoletoBuilder">
+        <property name="sourceAnchor" value="144,441" />
+        <property name="targetAnchor" value="144,371" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:FactoryBoleto.TFactoryBoleto">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="880,900,208,84" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:FactoryBoleto.TFactoryBoleto.GetFormatter(Boleto.IBoleto)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Pessoa.TPessoa">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="572,425,140,253" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TPessoa.FEmail" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TPessoa.FCnpjCpf" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TPessoa.FNome" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TPessoa.FTelefone" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TPessoa.FEndereco" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Pessoa.TPessoa.Create()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Pessoa.TPessoa.Destroy()" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TPessoa.CnpjCpf" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TPessoa.Nome" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TPessoa.Endereco" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TPessoa.Telefone" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TPessoa.Email" />
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Pessoa.TPessoa.Endereco">
+        <property name="sourceAnchor" value="712,509" />
+        <property name="targetAnchor" value="852,509" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:Pessoa.TPessoa.FEndereco">
+        <property name="sourceAnchor" value="712,593" />
+        <property name="targetAnchor" value="852,593" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Pessoa.TEndereco">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="852,411,134,281" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FLogradouro" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FBairro" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FUf" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FCep" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FNumero" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FComplemento" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Pessoa.TEndereco.FCidade" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Logradouro" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Numero" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Bairro" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Complemento" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Cidade" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Uf" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Pessoa.TEndereco.Cep" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Titulo.TTitulo">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1080,460,129,341" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FNossoNum" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FEspecMoeda" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FValor" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FAceite" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FEspecDoc" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FDocumento" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FEmissao" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FVencto" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:Titulo.TTitulo.FDataProc" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.Emissao" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.Vencto" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.Documento" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.EspecMoeda" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.EspecDoc" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.Aceite" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.DataProc" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.NossoNum" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:Titulo.TTitulo.Valor" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.IGeraBoletoBuilder">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="20,200,259,171" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.FormataCampos()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.ValidaDados()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.FormataNossoNumero()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.FormataCampoLivre()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.FormataCodigoBarras()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.FormataLinhaDigitavel()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IGeraBoletoBuilder.Criar()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TFactoryBBFormataNossoNumero">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="880,1020,273,84" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TFactoryBBFormataNossoNumero.GetFormata(System.string)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio7">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="720,1180,162,98" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TBBConvenio7.Formata(Boleto.IBoleto)" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:Boleto001.TBBConvenio7:Base.IFormataNossoNumero">
+        <property name="sourceAnchor" value="855,1278" />
+        <property name="targetAnchor" value="945,1360" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio6">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="920,1180,162,98" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TBBConvenio6.Formata(Boleto.IBoleto)" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:Boleto001.TBBConvenio6:Base.IFormataNossoNumero">
+        <property name="sourceAnchor" value="1000,1278" />
+        <property name="targetAnchor" value="1000,1360" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio4">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1100,1180,162,98" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Boleto001.TBBConvenio4.Formata(Boleto.IBoleto)" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:Boleto001.TBBConvenio4:Base.IFormataNossoNumero">
+        <property name="sourceAnchor" value="1126,1278" />
+        <property name="targetAnchor" value="1034,1360" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.IFormataNossoNumero">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="900,1360,180,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:Base.IFormataNossoNumero.Formata(Boleto.IBoleto)" />
+    </reference>
+  </view>
+</nodeSet>
