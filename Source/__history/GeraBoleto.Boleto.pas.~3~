@@ -1,0 +1,135 @@
+unit GeraBoleto.Boleto;
+
+interface
+
+uses
+  GeraBoleto.Pessoa, GeraBoleto.Conta, GeraBoleto.Titulo;
+
+type
+  IBoleto = interface
+    ['{824360BB-E02F-4F7B-9DCE-D4A58B23C79F}']
+    function GetBeneficiario: TPessoa;
+    function GetConta: TConta;
+    function GetPagador: TPessoa;
+    function GetTitulo: TTitulo;
+    function GetCampoLivre: string;
+    function GetLinhaDigitavel: string;
+    function GetCodigoBarras: string;
+    procedure SetCampoLivre(Value: string);
+    procedure SetLinhaDigitavel(Value: string);
+    procedure SetCodigoBarras(Value: string);
+    procedure Gerar;
+  end;
+
+  TBoleto = class (TInterfacedObject, IBoleto)
+  private
+    FLinhaDigitavel: string;
+    FCodigoBarras: string;
+    FCampoLivre: string;
+  protected
+    FBeneficiario: TPessoa;
+    FConta: TConta;
+    FPagador: TPessoa;
+    FTitulo: TTitulo;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    function GetBeneficiario: TPessoa;
+    function GetConta: TConta;
+    function GetPagador: TPessoa;
+    function GetTitulo: TTitulo;
+    function GetCampoLivre: string;
+    function GetLinhaDigitavel: string;
+    function GetCodigoBarras: string;
+    procedure SetCampoLivre(Value: string);
+    procedure SetLinhaDigitavel(Value: string);
+    procedure SetCodigoBarras(Value: string);
+    procedure Gerar;
+  end;
+
+implementation
+
+uses Base, FactoryBoleto;
+
+{ TBoleto }
+
+constructor TBoleto.Create;
+begin
+  FBeneficiario := TPessoa.Create;
+  FConta := TConta.Create;
+  FTitulo := TTitulo.Create;
+  FPagador := TPessoa.Create;
+end;
+
+destructor TBoleto.Destroy;
+begin
+  FBeneficiario.Free;
+  FConta.Free;
+  FTitulo.Free;
+  FPagador.Free;
+
+  inherited;
+end;
+
+procedure TBoleto.Gerar;
+begin
+  TGeraBoletoBuilder.Create(Self)
+    .FormataCampos
+    .ValidaDados
+    .FormataCampoLivre
+    .FormataCodigoBarras
+    .FormataLinhaDigitavel
+    .Criar;
+end;
+
+function TBoleto.GetBeneficiario: TPessoa;
+begin
+  Result := FBeneficiario;
+end;
+
+function TBoleto.GetCampoLivre: string;
+begin
+  Result := FCampoLivre;
+end;
+
+function TBoleto.GetCodigoBarras: string;
+begin
+  Result := FCodigoBarras;
+end;
+
+function TBoleto.GetConta: TConta;
+begin
+  Result := FConta;
+end;
+
+function TBoleto.GetLinhaDigitavel: string;
+begin
+  Result := FLinhaDigitavel;
+end;
+
+function TBoleto.GetPagador: TPessoa;
+begin
+  Result := FPagador;
+end;
+
+function TBoleto.GetTitulo: TTitulo;
+begin
+  Result := FTitulo;
+end;
+
+procedure TBoleto.SetCampoLivre(Value: string);
+begin
+  FCampoLivre := Value;
+end;
+
+procedure TBoleto.SetCodigoBarras(Value: string);
+begin
+  FCodigoBarras := Value;
+end;
+
+procedure TBoleto.SetLinhaDigitavel(Value: string);
+begin
+  FLinhaDigitavel := Value;
+end;
+
+end.

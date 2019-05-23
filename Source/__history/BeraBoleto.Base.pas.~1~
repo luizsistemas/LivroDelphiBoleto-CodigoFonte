@@ -1,0 +1,90 @@
+unit Base;
+
+interface
+
+uses Boleto, SysUtils, Funcoes;
+
+type
+  IFormataCampoLivre = interface
+    ['{0AE09CA6-EE68-4985-9931-43A9B7ED4C18}']
+    procedure Formata(ABoleto: IBoleto);
+  end;
+
+  IFormatacao = interface
+    ['{0B519469-828E-45AB-8C2D-1553FEB7358B}']
+    procedure FormataCamposConta;
+    procedure ValidaDados;
+    procedure FormataCampoLivre;
+  end;
+
+  IGeraBoletoBuilder = interface
+    ['{3925CF8E-2080-4F5A-B42B-777CEB9EB8DD}']
+    function FormataCampos: IGeraBoletoBuilder;
+    function ValidaDados: IGeraBoletoBuilder;
+    function FormataCampoLivre: IGeraBoletoBuilder;
+    function FormataCodigoBarras: IGeraBoletoBuilder;
+    function FormataLinhaDigitavel: IGeraBoletoBuilder;
+    function Criar: Boolean;
+  end;
+
+  TGeraBoletoBuilder = class(TInterfacedObject, IGeraBoletoBuilder)
+  private
+    FCampoLivre: string;
+    FBoleto: IBoleto;
+    FormatadorBanco: IFormatacao;
+  public
+    constructor Create(ABoleto: IBoleto);
+    function FormataCampos: IGeraBoletoBuilder;
+    function ValidaDados: IGeraBoletoBuilder;
+    function FormataCampoLivre: IGeraBoletoBuilder;
+    function FormataLinhaDigitavel: IGeraBoletoBuilder;
+    function FormataCodigoBarras: IGeraBoletoBuilder;
+    function Criar: Boolean;
+  end;
+
+
+implementation
+
+{ TBBFormata }
+
+uses
+  FactoryBanco;
+
+constructor TGeraBoletoBuilder.Create(ABoleto: IBoleto);
+begin
+  FBoleto := ABoleto;
+  FormatadorBanco := T
+end;
+
+function TGeraBoletoBuilder.Criar: Boolean;
+begin
+  Result := True;
+end;
+
+function TGeraBoletoBuilder.FormataCampos: IGeraBoletoBuilder;
+begin
+  Result := Self;
+end;
+
+function TGeraBoletoBuilder.FormataCodigoBarras: IGeraBoletoBuilder;
+begin
+  Result := Self;
+end;
+
+function TGeraBoletoBuilder.FormataLinhaDigitavel: IGeraBoletoBuilder;
+begin
+  Result := Self;
+end;
+
+function TGeraBoletoBuilder.FormataCampoLivre: IGeraBoletoBuilder;
+begin
+  Result := Self;
+end;
+
+function TGeraBoletoBuilder.ValidaDados: IGeraBoletoBuilder;
+begin
+  Result := Self;
+end;
+
+
+end.

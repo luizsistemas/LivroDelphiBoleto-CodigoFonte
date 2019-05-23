@@ -16,16 +16,17 @@ program GeraBoletoTest;
 
 uses
   DUnitTestRunner,
-  Banco in '..\Source\Banco.pas',
-  Conta in '..\Source\Conta.pas',
-  Pessoa in '..\Source\Pessoa.pas',
-  Titulo in '..\Source\Titulo.pas',
-  Boleto in '..\Source\Boleto.pas',
-  Boleto001 in '..\Source\Boleto001.pas',
+  GeraBoleto.Banco in '..\Source\GeraBoleto.Banco.pas',
+  GeraBoleto.Conta in '..\Source\GeraBoleto.Conta.pas',
+  GeraBoleto.Pessoa in '..\Source\GeraBoleto.Pessoa.pas',
+  GeraBoleto.Titulo in '..\Source\GeraBoleto.Titulo.pas',
+  GeraBoleto.Boleto in '..\Source\GeraBoleto.Boleto.pas',
+  GeraBoleto.Banco001 in '..\Source\GeraBoleto.Banco001.pas',
   TestBoleto in 'TestBoleto.pas',
-  Funcoes in '..\Source\Funcoes.pas',
-  Base in '..\Source\Base.pas',
-  FactoryBoleto in '..\Source\FactoryBoleto.pas';
+  GeraBoleto.Funcoes in '..\Source\GeraBoleto.Funcoes.pas',
+  GeraBoleto.Base in '..\Source\GeraBoleto.Base.pas',
+  GeraBoleto.Factories in '..\Source\GeraBoleto.Factories.pas',
+  TestGeraBoleto in 'TestGeraBoleto.pas';
 
 {$R *.RES}
 

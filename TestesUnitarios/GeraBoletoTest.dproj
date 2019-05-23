@@ -83,16 +83,17 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\Source\Banco.pas"/>
-        <DCCReference Include="..\Source\Conta.pas"/>
-        <DCCReference Include="..\Source\Pessoa.pas"/>
-        <DCCReference Include="..\Source\Titulo.pas"/>
-        <DCCReference Include="..\Source\Boleto.pas"/>
-        <DCCReference Include="..\Source\Boleto001.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Banco.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Conta.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Pessoa.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Titulo.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Boleto.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Banco001.pas"/>
         <DCCReference Include="TestBoleto.pas"/>
-        <DCCReference Include="..\Source\Funcoes.pas"/>
-        <DCCReference Include="..\Source\Base.pas"/>
-        <DCCReference Include="..\Source\FactoryBoleto.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Funcoes.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Base.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Factories.pas"/>
+        <DCCReference Include="TestGeraBoleto.pas"/>
         <None Include="ModelSupport_GeraBoletoTest\default.txaPackage"/>
         <None Include="ModelSupport_GeraBoletoTest\default.txvpck"/>
         <None Include="ModelSupport_GeraBoletoTest\Banco\default.txvpck"/>
@@ -134,13 +135,13 @@
                 </Source>
             </Delphi.Personality>
             <Deployment Version="3">
-                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoleto\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoletoTest\default.txvpck" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoletoTest\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoleto\default.txvpck" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -273,7 +274,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoletoTest\default.txvpck" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoletoTest\default.txaPackage" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
