@@ -3,7 +3,7 @@ unit GeraBoleto.Factories;
 interface
 
 uses
-  SysUtils, Vcl.Forms, GeraBoleto.Boleto, GeraBoleto.Base, GeraBoleto.Funcoes;
+  SysUtils, GeraBoleto.Boleto, GeraBoleto.Base, GeraBoleto.Funcoes;
 
 type
   TFactoryBoleto = class
@@ -15,7 +15,7 @@ implementation
 
 
 uses
-  GeraBoleto.Banco001, GeraBoleto.Banco237;
+  GeraBoleto.Banco001, Vcl.Forms;
 
 { TBoletoFactory }
 
@@ -26,7 +26,6 @@ begin
 
   case ABoleto.GetConta.Banco.Numero.ToInteger of
     1: Result := TFormata001.Create(ABoleto);
-    237: Result := TFormata237.Create(ABoleto);
   else
     raise Exception.Create('Banco não implementado!');
   end;

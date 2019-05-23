@@ -1,4 +1,4 @@
-unit TestGeraBoleto;
+unit TestGeraBoleto001;
 {
 
   Delphi DUnit Test Case
@@ -15,7 +15,7 @@ uses
   TestFramework, GeraBoleto.Base, GeraBoleto.Boleto, GeraBoleto.Funcoes, SysUtils;
 
 type
-  TestTGeraBoletoBuilder = class(TTestCase)
+  TestTGeraBoletoBuilder001 = class(TTestCase)
   strict private
     FBoleto: IBoleto;
   private
@@ -33,7 +33,7 @@ implementation
 uses
   GeraBoleto.Conta, GeraBoleto.Titulo;
 
-procedure TestTGeraBoletoBuilder.SetDadosPadrao;
+procedure TestTGeraBoletoBuilder001.SetDadosPadrao;
 var
   Conta: TConta;
   Titulo: TTitulo;
@@ -59,24 +59,24 @@ begin
   Titulo.Valor := 300.00;
 end;
 
-procedure TestTGeraBoletoBuilder.SetUp;
+procedure TestTGeraBoletoBuilder001.SetUp;
 begin
   FBoleto := TBoleto.Create;
   SetDadosPadrao;
 end;
 
-procedure TestTGeraBoletoBuilder.TearDown;
+procedure TestTGeraBoletoBuilder001.TearDown;
 begin
 end;
 
-procedure TestTGeraBoletoBuilder.TestFormataLinhaDigitavel;
+procedure TestTGeraBoletoBuilder001.TestFormataLinhaDigitavel;
 begin
   FBoleto.Gerar;
   CheckEquals('00190.00009 01234.567004 00000.001172 6 79050000030000', FBoleto.GetLinhaDigitavel,
     'Linha Digitável inválida!');
 end;
 
-procedure TestTGeraBoletoBuilder.TestFormataCodigoBarras;
+procedure TestTGeraBoletoBuilder001.TestFormataCodigoBarras;
 begin
   FBoleto.Gerar;
   CheckEquals('00196790500000300000000001234567000000000117', FBoleto.GetCodigoBarras, 'Código de Barras inválido!');
@@ -84,6 +84,6 @@ end;
 
 initialization
   // Register any test cases with the test runner
-  RegisterTest(TestTGeraBoletoBuilder.Suite);
+  RegisterTest(TestTGeraBoletoBuilder001.Suite);
 end.
 
