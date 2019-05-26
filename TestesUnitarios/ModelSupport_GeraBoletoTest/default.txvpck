@@ -23,7 +23,7 @@
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.IFormataNossoNumero" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Base.@unitclass" />
     </reference>
-    <reference referencedUin="design:view:::ut4q4uvf3ts_v">
+    <reference referencedUin="uml:package:GeraBoletoTest:src:Boleto001">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="229,180,213,211" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio7" />
@@ -33,13 +33,13 @@
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TFormata001" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto001.TBBConvenio4" />
     </reference>
-    <reference referencedUin="design:view:::s0i7866svct_v">
+    <reference referencedUin="uml:package:GeraBoletoTest:src:FactoryBoleto">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="90,180,131,151" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:FactoryBoleto.@unitclass" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:FactoryBoleto.TFactoryBoleto" />
     </reference>
-    <reference referencedUin="design:view:::insvnox2egi_v">
+    <reference referencedUin="uml:package:GeraBoletoTest:src:Conta">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="480,1,100,151" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Conta.@unitclass" />
@@ -56,19 +56,19 @@
       <property name="bounds" value="480,341,142,134" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoletoTest.@unitclass" />
     </reference>
-    <reference referencedUin="design:view:::50nnfatcpcp_v">
+    <reference referencedUin="uml:package:GeraBoletoTest:src:Funcoes">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="371,429,103,134" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Funcoes.@unitclass" />
     </reference>
-    <reference referencedUin="design:view:::ce0e3k2y4jh_v">
+    <reference referencedUin="uml:package:GeraBoletoTest:src:Boleto">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="262,429,100,168" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.@unitclass" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.IBoleto" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Boleto.TBoleto" />
     </reference>
-    <reference referencedUin="design:view:::blk1wrp58ui_v">
+    <reference referencedUin="uml:package:GeraBoletoTest:src:Pessoa">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="153,429,100,166" />
       <reference referencedUin="delphi:e_class:src:GeraBoletoTest:Pessoa.TPessoa" />
@@ -78,6 +78,24 @@
     <reference referencedUin="design:view:::cj07pi2jd0n_v">
       <property name="$shortcutReference" value="true" />
       <property name="bounds" value="44,429,100,102" />
+      <reference referencedUin="design:view:::y4cvu33db6n_v" />
+      <reference referencedUin="design:view:::y92r4zg0l7p_v" />
+      <reference referencedUin="design:view:::drlw807tyeq_v" />
+      <reference referencedUin="design:view:::0d7mdv0iovi_v" />
+      <reference referencedUin="design:view:::7z5kgib3s6h_v" />
+      <reference referencedUin="design:view:::knjsay8obwk_v" />
+      <reference referencedUin="design:view:::eej9mtfzpbq_v" />
+      <reference referencedUin="design:view:::6v4jaufsn9g_v" />
+      <reference referencedUin="design:view:::1tin3uthp0l_v" />
+      <reference referencedUin="design:view:::hxhga5uoht_v" />
+    </reference>
+    <reference referencedUin="design:view:::0tly83ffeodxs7jnl_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:TestFormata001.TestTFormata001" />
+      <reference referencedUin="delphi:e_class:src:GeraBoletoTest:TestFormata001.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::nx0yuixk3odl02e9k_v">
+      <property name="$shortcutReference" value="true" />
     </reference>
   </view>
 </nodeSet>

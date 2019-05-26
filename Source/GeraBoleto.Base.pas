@@ -3,7 +3,8 @@ unit GeraBoleto.Base;
 interface
 
 uses
-  GeraBoleto.Boleto, SysUtils, GeraBoleto.Funcoes, GeraBoleto.Conta, GeraBoleto.Titulo;
+  GeraBoleto.Boleto,
+    GeraBoleto.Conta, GeraBoleto.Titulo;
 
 const
   MOEDA = '9';
@@ -33,7 +34,6 @@ type
 
   TGeraBoletoBuilder = class(TInterfacedObject, IGeraBoletoBuilder)
   private
-    FCampoLivre: string;
     FBoleto: IBoleto;
     FConta: TConta;
     FTitulo: TTitulo;
@@ -50,10 +50,10 @@ type
 
 implementation
 
-{ TBBFormata }
+{ TGeraBoletoBuilder }
 
 uses
-  GeraBoleto.Factories;
+  GeraBoleto.Factories, SysUtils, GeraBoleto.Funcoes;
 
 constructor TGeraBoletoBuilder.Create(ABoleto: IBoleto);
 begin

@@ -26,9 +26,10 @@ uses
   GeraBoleto.Funcoes in '..\Source\GeraBoleto.Funcoes.pas',
   GeraBoleto.Base in '..\Source\GeraBoleto.Base.pas',
   GeraBoleto.Factories in '..\Source\GeraBoleto.Factories.pas',
-  TestGeraBoleto001 in 'TestGeraBoleto001.pas',
+  TestFormata001 in 'TestFormata001.pas',
   GeraBoleto.Banco237 in '..\Source\GeraBoleto.Banco237.pas',
-  TestGeraBoleto237 in 'TestGeraBoleto237.pas';
+  TestGeraBoletoBuilder in 'TestGeraBoletoBuilder.pas',
+  TestFormata237 in 'TestFormata237.pas';
 
 {$R *.RES}
 

@@ -2,4 +2,8 @@
 /TestesUnitarios/__history
 /TestesUnitarios/__recovery
 /TestesUnitarios/Win32
+/TesteCaixaBranca/*.dcu
+/TesteCaixaBranca/__history
+/TesteCaixaBranca/__recovery
+/TesteCaixaBranca/Win32
 /*.~*

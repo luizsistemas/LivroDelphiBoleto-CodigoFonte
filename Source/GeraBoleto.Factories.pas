@@ -13,7 +13,6 @@ type
 
 implementation
 
-
 uses
   GeraBoleto.Banco001, GeraBoleto.Banco237;
 

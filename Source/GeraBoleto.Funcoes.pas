@@ -8,12 +8,32 @@ uses
   function LeftPad(Value: String; Length: Integer; Pad: Char='0'): string;
   function RightPad(Value: String; Length: Integer; Pad: Char='0'): string;
   function IsNumber(Value: string): Boolean;
-  function FatorVencimento(AVencimento: TDateTime): string;
+  function Modulo11(Valor: string; Base: Integer = 9): string;
   function CalcDigitoVerificadorCodBarras(Valor: string): string;
+  function FatorVencimento(AVencimento: TDateTime): string;
   function Modulo10(Valor: string): string;
 
 
 implementation
+
+function Modulo11(Valor: string; Base: Integer = 9): string;
+var
+  Soma: Integer;
+  Contador, Peso, Resto: Integer;
+begin
+  Soma := 0;
+  Peso := 2;
+  for Contador := Length(Valor) downto 1 do
+  begin
+    Soma := Soma + (StrToInt(Valor[Contador]) * Peso);
+    if Peso < Base then
+      Peso := Peso + 1
+    else
+      Peso := 2;
+  end;
+  Resto := Soma mod 11;
+  Result := IntToStr(11 - Resto);
+end;
 
 function CalcDigitoVerificadorCodBarras(Valor: string): string;
 var
@@ -39,6 +59,11 @@ begin
   Result := IntToStr(Digito);
 end;
 
+function FatorVencimento(AVencimento: TDateTime): string;
+begin
+  Result := IntToStr(Trunc(AVencimento - EncodeDate(1997, 10, 7)));
+end;
+
 function Modulo10(Valor: string): string;
 var
   Soma: string;
@@ -62,11 +87,6 @@ begin
   if (Digito > 9) then
     Digito := 0;
   Result := IntToStr(Digito);
-end;
-
-function FatorVencimento(AVencimento: TDateTime): string;
-begin
-  Result := IntToStr(Trunc(AVencimento - EncodeDate(1997, 10, 7)));
 end;
 
 function LeftPad(Value: String; Length: Integer; Pad: Char='0'): string;

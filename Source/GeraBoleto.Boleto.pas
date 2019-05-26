@@ -13,19 +13,19 @@ type
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
     function GetCampoLivre: string;
-    function GetLinhaDigitavel: string;
     function GetCodigoBarras: string;
+    function GetLinhaDigitavel: string;
     procedure SetCampoLivre(Value: string);
-    procedure SetLinhaDigitavel(Value: string);
     procedure SetCodigoBarras(Value: string);
+    procedure SetLinhaDigitavel(Value: string);
     procedure Gerar;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
   private
-    FLinhaDigitavel: string;
-    FCodigoBarras: string;
     FCampoLivre: string;
+    FCodigoBarras: string;
+    FLinhaDigitavel: string;
   protected
     FBeneficiario: TPessoa;
     FConta: TConta;
@@ -39,11 +39,11 @@ type
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
     function GetCampoLivre: string;
-    function GetLinhaDigitavel: string;
     function GetCodigoBarras: string;
+    function GetLinhaDigitavel: string;
     procedure SetCampoLivre(Value: string);
-    procedure SetLinhaDigitavel(Value: string);
     procedure SetCodigoBarras(Value: string);
+    procedure SetLinhaDigitavel(Value: string);
     procedure Gerar;
   end;
 

@@ -31,9 +31,15 @@ begin
 end;
 
 procedure TFormata237.FormataCampoLivre;
+  function DigitoNossoNumBradesco: string;
+  begin
+    Result := Modulo11(FBoleto.GetConta.Carteira + FBoleto.GetTitulo.NossoNum, 7);
+    if Result = '10' then
+      Result := 'P';
+  end;
 begin
   FBoleto.GetTitulo.NossoNum := LeftPad(FBoleto.GetConta.SeqNossoNumero.ToString, 11);
-
+  FBoleto.GetTitulo.DigitoNossoNum := DigitoNossoNumBradesco;
   FBoleto.SetCampoLivre( FBoleto.GetConta.Agencia +  FBoleto.GetConta.Carteira +
     FBoleto.GetTitulo.NossoNum + FBoleto.GetConta.Conta + '0');
 end;
