@@ -37,7 +37,7 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="260,840,258,265" />
+      <property name="bounds" value="260,840,258,250" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FCampoLivre" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FBoleto" />
@@ -52,7 +52,7 @@
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FormataCodigoBarras()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.Criar()" />
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FormatadorBanco">
-        <property name="sourceAnchor" value="344,1105" />
+        <property name="sourceAnchor" value="344,1090" />
         <property name="targetAnchor" value="344,1200" />
         <property name="bendpoints" value="" />
       </reference>
@@ -323,6 +323,32 @@
       <property name="bounds" value="780,1560,237,81" />
       <property name="location_set_by_user" value="True" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IFormataCampoLivre.Formata(GeraBoleto.Boleto.IBoleto)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1420,120,239,126" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Add()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Delete(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Boletos()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Imprimir()" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1400,320,243,190" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.FBoletos" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Create()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Add()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Delete(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Boletos()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Imprimir()" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer:GeraBoleto.Container.IBoletoContainer">
+        <property name="sourceAnchor" value="1531,320" />
+        <property name="targetAnchor" value="1531,246" />
+        <property name="bendpoints" value="" />
+      </reference>
     </reference>
   </view>
 </nodeSet>

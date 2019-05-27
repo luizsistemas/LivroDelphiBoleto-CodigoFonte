@@ -56,8 +56,8 @@ begin
     raise Exception.Create('Dígito do Número do Banco inválido!');
   if not IsNumber( FBoleto.GetConta.Conta ) then
     raise Exception.Create('Número da Conta inválido!');
-  if not (FBoleto.GetConta.Carteira.Length = 2) or
-    not IsNumber(FBoleto.GetConta.Carteira) then
+  if not (FBoleto.GetConta.Carteira.Length = 2) {or
+    not IsNumber(FBoleto.GetConta.Carteira)} then
     raise Exception.Create('Carteira inválida!');
 end;
 

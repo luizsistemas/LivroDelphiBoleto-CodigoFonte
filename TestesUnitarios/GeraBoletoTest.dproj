@@ -97,6 +97,8 @@
         <DCCReference Include="..\Source\GeraBoleto.Banco237.pas"/>
         <DCCReference Include="TestGeraBoletoBuilder.pas"/>
         <DCCReference Include="TestFormata237.pas"/>
+        <DCCReference Include="..\Source\GeraBoleto.Container.pas"/>
+        <DCCReference Include="TestContainerBoleto.pas"/>
         <None Include="ModelSupport_GeraBoletoTest\default.txaPackage"/>
         <None Include="ModelSupport_GeraBoletoTest\default.txvpck"/>
         <None Include="ModelSupport_GeraBoletoTest\Banco\default.txvpck"/>
@@ -128,6 +130,7 @@
         <None Include="ModelSupport_GeraBoletoTest\GeraBoleto\Pessoa\default.txvpck"/>
         <None Include="ModelSupport_GeraBoletoTest\Class Diagram.txvcls"/>
         <None Include="ModelSupport_GeraBoletoTest\TestFormata001\default.txvpck"/>
+        <None Include="ModelSupport_GeraBoletoTest\GeraBoleto\Container\default.txvpck"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -241,6 +244,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="ModelSupport_GeraBoletoTest\Titulo\default.txaPackage" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="ModelSupport_GeraBoletoTest\GeraBoleto\Container\default.txvpck" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>

@@ -29,7 +29,9 @@ uses
   TestFormata001 in 'TestFormata001.pas',
   GeraBoleto.Banco237 in '..\Source\GeraBoleto.Banco237.pas',
   TestGeraBoletoBuilder in 'TestGeraBoletoBuilder.pas',
-  TestFormata237 in 'TestFormata237.pas';
+  TestFormata237 in 'TestFormata237.pas',
+  GeraBoleto.Container in '..\Source\GeraBoleto.Container.pas',
+  TestContainerBoleto in 'TestContainerBoleto.pas';
 
 {$R *.RES}
 

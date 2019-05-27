@@ -18,6 +18,8 @@ type
     procedure TestDigitoDoNumeroDoBancoInvalido;
     procedure TestFormatacaoDoNumeroDaAgencia;
     procedure TestFormatacaoDoNumeroDaConta;
+    procedure TestFormatacaoDaCarteiraQuantidadeCaracteresInvalido;
+    procedure TestFormatacaoDaCarteiraCaracteresInvalidos;
     procedure TestNumeroDaContaComCarectereInvalido;
     procedure TestFormatacaoCampoLivreParaConvenio4E6;
     procedure TestDigitoVerificadorDoNossoNumero;
@@ -105,6 +107,22 @@ begin
   FBoleto.GetConta.Carteira := '17';
   FBoleto.Gerar;
   CheckEquals('0000001234567000000012317', FBoleto.GetCampoLivre, 'Formatação do Campo Livre Inválido para convênio com 7 dígitos');
+end;
+
+procedure TestTFormata001.TestFormatacaoDaCarteiraCaracteresInvalidos;
+begin
+  StartExpectingException(exception);
+  FBoleto.GetConta.Carteira := 'a7';
+  FBoleto.Gerar;
+  StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na carteira');
+end;
+
+procedure TestTFormata001.TestFormatacaoDaCarteiraQuantidadeCaracteresInvalido;
+begin
+  StartExpectingException(exception);
+  FBoleto.GetConta.Carteira := '017';
+  FBoleto.Gerar;
+  StopExpectingException('Nenhuma exceção gerada quando carteira com quantidade de caracteres inválida');
 end;
 
 procedure TestTFormata001.TestFormatacaoDoNumeroDaAgencia;
