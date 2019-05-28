@@ -6,6 +6,9 @@
         <Projects Include="TestesUnitarios\GeraBoletoTest.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="TesteCaixaPreta\TesteCaixaPreta.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +26,23 @@
     <Target Name="GeraBoletoTest:Make">
         <MSBuild Projects="TestesUnitarios\GeraBoletoTest.dproj" Targets="Make"/>
     </Target>
+    <Target Name="TesteCaixaPreta">
+        <MSBuild Projects="TesteCaixaPreta\TesteCaixaPreta.dproj"/>
+    </Target>
+    <Target Name="TesteCaixaPreta:Clean">
+        <MSBuild Projects="TesteCaixaPreta\TesteCaixaPreta.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TesteCaixaPreta:Make">
+        <MSBuild Projects="TesteCaixaPreta\TesteCaixaPreta.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="GeraBoletoTest"/>
+        <CallTarget Targets="GeraBoletoTest;TesteCaixaPreta"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="GeraBoletoTest:Clean"/>
+        <CallTarget Targets="GeraBoletoTest:Clean;TesteCaixaPreta:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="GeraBoletoTest:Make"/>
+        <CallTarget Targets="GeraBoletoTest:Make;TesteCaixaPreta:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
