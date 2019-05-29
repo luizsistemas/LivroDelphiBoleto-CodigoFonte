@@ -3,8 +3,7 @@ unit GeraBoleto.Container;
 interface
 
 uses
-  GeraBoleto.Boleto, System.Generics.Collections,
-    GeraBoleto.Impressao, SysUtils;
+  GeraBoleto.Boleto, System.Generics.Collections, GeraBoleto.Impressao, SysUtils;
 
 type
   IBoletoContainer = interface

@@ -1,0 +1,96 @@
+unit GeraBoleto.Impressao.FastReport;
+
+interface
+
+uses
+  GeraBoleto.Impressao, udmBoletoFastReport, GeraBoleto.Boleto,
+  System.Generics.Collections, SysUtils;
+
+type
+  TImpressaoBoletoFast = class(TInterfacedObject, IImpressaoBoleto)
+  private
+    FReportFile: string;
+    Dm: TdmBoletoFastReport;
+    procedure AdicionaDadosNoDataModule(ABoleto: IBoleto);
+  public
+    constructor Create(AReportFile: string);
+    destructor Destroy; override;
+    procedure Imprime(ABoletos: TList<IBoleto>);
+  end;
+
+implementation
+
+{ TImpressaoBoletoFast }
+
+constructor TImpressaoBoletoFast.Create(AReportFile: string);
+begin
+  Dm := TdmBoletoFastReport.Create(nil);
+  Dm.Boletos.Close;
+  Dm.Boletos.Open;
+  FReportFile := AReportFile;
+  if FReportFile.IsEmpty then
+    raise Exception.Create('Arquivo do FastReport não informado!');
+
+  if not FileExists(FReportFile) then
+    raise Exception.Create('Arquivo do FastReport não encontrado!');
+end;
+
+destructor TImpressaoBoletoFast.Destroy;
+begin
+  FreeAndNil(Dm);
+  inherited;
+end;
+
+procedure TImpressaoBoletoFast.Imprime(ABoletos: TList<IBoleto>);
+var
+  I: Integer;
+begin
+  for I := 0 to ABoletos.Count - 1 do
+    AdicionaDadosNoDataModule(ABoletos[I]);
+
+  Dm.Report.LoadFromFile(FReportFile);
+  Dm.Report.ShowReport;
+end;
+
+procedure TImpressaoBoletoFast.AdicionaDadosNoDataModule(ABoleto: IBoleto);
+begin
+  Dm.Boletos.Append;
+  Dm.BoletosBancoNumero.AsString := ABoleto.GetConta.Banco.Numero;
+  Dm.BoletosBancoDigito.AsString := ABoleto.GetConta.Banco.DigitoNumero;
+
+  Dm.BoletosContaLocalPagto.AsString := ABoleto.GetConta.LocalPagto;
+  Dm.BoletosContaCodBeneficiario.AsString := ABoleto.GetConta.Conta;
+  Dm.BoletosContaCarteira.AsString := ABoleto.GetConta.Carteira;
+
+  Dm.BoletosBenCnpjCpf.AsString := ABoleto.GetBeneficiario.CnpjCpf;
+  Dm.BoletosBenNome.AsString := ABoleto.GetBeneficiario.Nome;
+  Dm.BoletosBenLogradouro.AsString := ABoleto.GetBeneficiario.Endereco.Logradouro;
+  Dm.BoletosBenNumero.AsString := ABoleto.GetBeneficiario.Endereco.Numero;
+  Dm.BoletosBenBairro.AsString := ABoleto.GetBeneficiario.Endereco.Bairro;
+  Dm.BoletosBenCidade.AsString := ABoleto.GetBeneficiario.Endereco.Cidade;
+  Dm.BoletosBenUF.AsString := ABoleto.GetBeneficiario.Endereco.Uf;
+  Dm.BoletosBenFone.AsString := ABoleto.GetBeneficiario.Telefone;
+
+  Dm.BoletosTitData.AsDateTime := ABoleto.GetTitulo.Emissao;
+  Dm.BoletosTitVencimento.AsDateTime := ABoleto.GetTitulo.Vencto;
+  Dm.BoletosTitDataProc.AsDateTime := ABoleto.GetTitulo.DataProc;
+  Dm.BoletosTitNossoNumero.AsString := ABoleto.GetTitulo.NossoNum;
+  Dm.BoletosTitDocumento.AsString := ABoleto.GetTitulo.Documento;
+  Dm.BoletosTitAceite.AsString := ABoleto.GetTitulo.Aceite;
+  Dm.BoletosTitEspecDoc.AsString := ABoleto.GetTitulo.EspecDoc;
+  Dm.BoletosTitEspecMoeda.AsString := ABoleto.GetTitulo.EspecMoeda;
+  Dm.BoletosTitValor.AsCurrency := ABoleto.GetTitulo.Valor;
+  Dm.BoletosTitInstrucoes.AsString := ABoleto.GetTitulo.Instrucoes.Text;
+
+  Dm.BoletosPagCnpjCpf.AsString := ABoleto.GetPagador.CnpjCpf;
+  Dm.BoletosPagNome.AsString := ABoleto.GetPagador.Nome;
+  Dm.BoletosPagLogradouro.AsString := ABoleto.GetPagador.Endereco.Logradouro;
+  Dm.BoletosPagNumero.AsString := ABoleto.GetPagador.Endereco.Numero;
+  Dm.BoletosPagBairro.AsString := ABoleto.GetPagador.Endereco.Bairro;
+  Dm.BoletosPagCidade.AsString := ABoleto.GetPagador.Endereco.Cidade;
+  Dm.BoletosPagUF.AsString := ABoleto.GetPagador.Endereco.Uf;
+  Dm.BoletosPagFone.AsString := ABoleto.GetPagador.Telefone;
+  Dm.Boletos.Post;
+end;
+
+end.

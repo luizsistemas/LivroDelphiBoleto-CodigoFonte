@@ -32,7 +32,9 @@ uses
   TestFormata237 in 'TestFormata237.pas',
   GeraBoleto.Container in '..\Source\GeraBoleto.Container.pas',
   TestContainerBoleto in 'TestContainerBoleto.pas',
-  GeraBoleto.Impressao in '..\Source\GeraBoleto.Impressao.pas';
+  GeraBoleto.Impressao in '..\Source\GeraBoleto.Impressao.pas',
+  udmBoletoFastReport in '..\Source\udmBoletoFastReport.pas' {dmBoletoFastReport: TDataModule},
+  GeraBoleto.Impressao.FastReport in '..\Source\GeraBoleto.Impressao.FastReport.pas';
 
 {$R *.RES}
 

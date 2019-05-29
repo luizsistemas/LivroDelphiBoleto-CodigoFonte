@@ -1,0 +1,12 @@
+unit GeraBoleto.Impressao;
+
+interface
+
+type
+  IImpressaBoleto = interface
+    procedure Imprime;
+  end;
+
+implementation
+
+end.

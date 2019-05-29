@@ -1,0 +1,106 @@
+unit GeraBoleto.Impressao.FastReport;
+
+interface
+
+uses
+  GeraBoleto.Impressao, udmBoletoFastReport, GeraBoleto.Boleto,
+  System.Generics.Collections, SysUtils;
+
+type
+  TImpressaoBoletoFast = class(TInterfacedObject, IImpressaoBoleto)
+  private
+    FFileFast: string;
+    Dm: TdmBoletoFastReport;
+    procedure PreencheDadosDoDataModule(ABoleto: IBoleto);
+  public
+    constructor Create(AFileFast: string);
+    destructor Destroy; override;
+    procedure Imprime(ABoletos: TList<IBoleto>);
+  end;
+
+implementation
+
+{ TImpressaoBoletoFast }
+
+constructor TImpressaoBoletoFast.Create(AFileFast: string);
+begin
+  Dm := TdmBoletoFastReport.Create(nil);
+  FFileFast := AFileFast;
+  if FFileFast.IsEmpty then
+    raise Exception.Create('Arquivo do FastReport não informado!');
+
+  if not FileExists(FFileFast) then
+    raise Exception.Create('Arquivo do FastReport não encontrado!');
+
+  FFileFast := AFileFast;
+end;
+
+destructor TImpressaoBoletoFast.Destroy;
+begin
+  FreeAndNil(Dm);
+  inherited;
+end;
+
+procedure TImpressaoBoletoFast.Imprime(ABoletos: TList<IBoleto>);
+var
+  I: Integer;
+begin
+  for I := 0 to ABoletos.Count - 1 do
+    PreencheDadosDoDataModule(ABoletos[I]);
+
+  Dm.Report.LoadFromFile(FFileFast);
+  Dm.Report.ShowReport;
+end;
+
+procedure TImpressaoBoletoFast.PreencheDadosDoDataModule(ABoleto: IBoleto);
+begin
+//  Dm.Boletos.Close;
+  Dm.Boletos.Open;
+  Dm.Boletos.Append;
+  Dm.BoletosBenCnpjCpf.AsString := ABoleto.GetBeneficiario.CnpjCpf;
+  Dm.BoletosBenNome.AsString := ABoleto.GetBeneficiario.Nome;
+  Dm.BoletosBenLogradouro.AsString := ABoleto.GetBeneficiario.Endereco.Logradouro;
+  Dm.BoletosBenNumero.AsString := ABoleto.GetBeneficiario.Endereco.Numero;
+  Dm.BoletosBenBairro.AsString := ABoleto.GetBeneficiario.Endereco.Bairro;
+  Dm.BoletosBenCidade.AsString := ABoleto.GetBeneficiario.Endereco.Cidade;
+  Dm.BoletosBenUF.AsString := ABoleto.GetBeneficiario.Endereco.Uf;
+  Dm.BoletosBenFone.AsString := ABoleto.GetBeneficiario.Telefone;
+  Dm.Boletos.Post;
+//  with ABoleto.GetConta do
+//  begin
+//    Banco.Numero := edNumBanco.Text;
+//    Banco.DigitoNumero := edDigNumero.Text;
+//    LocalPagto := 'Pago em qualquer agência até o vencimento';
+//    Agencia := edAgencia.Text;
+//    DigitoAgencia := edDigAgencia.Text;
+//    Conta := edConta.Text;
+//    DigitoConta := edDigConta.Text;
+//    Carteira := edCarteira.Text;
+//    Convenio := edConvenio.Text;
+//    SeqNossoNumero := StrToInt(edSequencia.Text);
+//  end;
+//  with ABoleto.GetTitulo do
+//  begin
+//    Emissao := StrToDate(edData.Text);
+//    Vencto := StrToDate(edVencimento.Text);
+//    Documento := edDocumento.Text;
+//    Aceite := edAceite.Text;
+//    DataProc := StrToDate(edDataProc.Text);
+//    EspecMoeda := 'R$';
+//    EspecDoc := 'DM';
+//    Valor := StrToCurr(edValor.Text);
+//  end;
+//  with ABoleto.GetPagador do
+//  begin
+//    CnpjCpf := edPagCnpj.Text;
+//    Nome := edPagNome.Text;
+//    Endereco.Logradouro := edPagLogradouro.Text;
+//    Endereco.Numero := edPagNumero.Text;
+//    Endereco.Bairro := edPagBairro.Text;
+//    Endereco.Cidade := edPagCidade.Text;
+//    Endereco.Uf := edPagUF.Text;
+//  end;
+
+end;
+
+end.

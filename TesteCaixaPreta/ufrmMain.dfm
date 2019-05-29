@@ -48,6 +48,7 @@ object frmMain: TfrmMain
       Align = alLeft
       Caption = 'Imprime'
       TabOrder = 3
+      OnClick = btnImprimeClick
     end
     object btnImpNoMemo: TButton
       Left = 179

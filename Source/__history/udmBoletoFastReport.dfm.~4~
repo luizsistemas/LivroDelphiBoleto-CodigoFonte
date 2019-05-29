@@ -1,0 +1,71 @@
+object dmBoletoFastReport: TdmBoletoFastReport
+  OldCreateOrder = False
+  Height = 487
+  Width = 721
+  object Boletos: TFDMemTable
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvCheckRequired, uvAutoCommitUpdates]
+    UpdateOptions.CheckRequired = False
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 48
+    Top = 24
+    object BoletosBenCnpjCpf: TStringField
+      FieldName = 'BenCnpjCpf'
+    end
+    object BoletosBenNome: TStringField
+      FieldName = 'BenNome'
+      Size = 100
+    end
+    object BoletosBenLogradouro: TStringField
+      FieldName = 'BenLogradouro'
+      Size = 100
+    end
+    object BoletosBenNumero: TStringField
+      FieldName = 'BenNumero'
+      Size = 15
+    end
+    object BoletosBenBairro: TStringField
+      FieldName = 'BenBairro'
+      Size = 60
+    end
+    object BoletosBenCidade: TStringField
+      FieldName = 'BenCidade'
+      Size = 100
+    end
+    object BoletosBenUF: TStringField
+      FieldName = 'BenUF'
+      Size = 2
+    end
+    object BoletosBenFone: TStringField
+      FieldName = 'BenFone'
+    end
+  end
+  object Report: TfrxReport
+    Tag = 1
+    Version = '6.2.16'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 40401.475989294000000000
+    ReportOptions.LastChange = 43613.437042106480000000
+    ScriptLanguage = 'PascalScript'
+    StoreInDFM = False
+    OnReportPrint = 'frxReportOnReportPrint'
+    Left = 128
+    Top = 24
+  end
+  object frxDsBoletos: TfrxDBDataset
+    UserName = 'frxDsBoletos'
+    CloseDataSource = False
+    DataSet = Boletos
+    BCDToCurrency = False
+    Left = 48
+    Top = 80
+  end
+end

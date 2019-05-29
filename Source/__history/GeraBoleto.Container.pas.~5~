@@ -3,8 +3,7 @@ unit GeraBoleto.Container;
 interface
 
 uses
-  GeraBoleto.Boleto, System.Generics.Collections,
-    GeraBoleto.Impressao, SysUtils;
+  GeraBoleto.Boleto, System.Generics.Collections;
 
 type
   IBoletoContainer = interface
@@ -12,23 +11,18 @@ type
     function Add: IBoleto;
     procedure Delete(Index: Integer);
     function Boletos: TList<IBoleto>;
-    procedure SetModuloImpressao(Value: IImpressaoBoleto);
-    function GetModuloImpressao: IImpressaoBoleto;
     procedure Imprimir;
   end;
 
   TBoletoContainer = class(TInterfacedObject, IBoletoContainer)
   private
     FBoletos: TList<IBoleto>;
-    FModuloImpressao: IImpressaoBoleto;
   public
     constructor Create;
     destructor Destroy; override;
     function Add: IBoleto;
     procedure Delete(Index: Integer);
     function Boletos: TList<IBoleto>;
-    procedure SetModuloImpressao(Value: IImpressaoBoleto);
-    function GetModuloImpressao: IImpressaoBoleto;
     procedure Imprimir;
   end;
 
@@ -45,11 +39,6 @@ destructor TBoletoContainer.Destroy;
 begin
   FBoletos.Free;
   inherited;
-end;
-
-function TBoletoContainer.GetModuloImpressao: IImpressaoBoleto;
-begin
-  Result := FModuloIMpressao;
 end;
 
 function TBoletoContainer.Add: IBoleto;
@@ -71,15 +60,7 @@ end;
 
 procedure TBoletoContainer.Imprimir;
 begin
-  if not Assigned(FModuloImpressao) then
-    raise Exception.Create('Módulo de Impressão não selecionado');
-
-  FModuloImpressao.Imprime(FBoletos);
-end;
-
-procedure TBoletoContainer.SetModuloImpressao(Value: IImpressaoBoleto);
-begin
-  FModuloImpressao := Value;
+  // a ser implementado quando tratarmos dos testes caixa preta (ou testes end to end)
 end;
 
 end.

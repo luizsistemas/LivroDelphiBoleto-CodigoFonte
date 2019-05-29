@@ -5,7 +5,7 @@ interface
 uses
   GeraBoleto.Boleto, System.Generics.Collections;
 type
-  IImpressaoBoleto = interface
+  IImpressaBoleto = interface
     procedure Imprime(ABoletos: TList<IBoleto>);
   end;
 

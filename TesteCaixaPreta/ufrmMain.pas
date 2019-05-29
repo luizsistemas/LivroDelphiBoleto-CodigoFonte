@@ -81,6 +81,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure btnAdicionaClick(Sender: TObject);
     procedure btnImpNoMemoClick(Sender: TObject);
+    procedure btnImprimeClick(Sender: TObject);
   private
     FContainer: IBoletoContainer;
     procedure PreencheBoleto(ABoleto: IBoleto);
@@ -93,6 +94,9 @@ var
 
 implementation
 
+uses
+  GeraBoleto.Impressao.FastReport, GeraBoleto.Impressao;
+
 {$R *.dfm}
 
 procedure TfrmMain.btnAdicionaClick(Sender: TObject);
@@ -102,6 +106,7 @@ begin
   Boleto := FContainer.Add;
   PreencheBoleto(Boleto);
   Boleto.Gerar;
+  ShowMessage('Boleto foi adicionado!');
 end;
 
 procedure TfrmMain.btnImpNoMemoClick(Sender: TObject);
@@ -112,10 +117,25 @@ begin
   begin
     Boleto := FContainer.Boletos[0];  // pegamos o primeiro boleto da lista
     memObs.Lines.Clear;
+    memObs.Lines.Add('Nome Banco: ' + Boleto.GetConta.Banco.Nome);
     memObs.Lines.Add('Nosso Número: ' + Boleto.GetTitulo.NossoNum);
     memObs.Lines.Add('Dígito Nosso Número: ' + Boleto.GetTitulo.DigitoNossoNum);
     memObs.Lines.Add('Código de Barras: ' + Boleto.GetCodigoBarras);
     memObs.Lines.Add('Linha Digitável: ' + Boleto.GetLinhaDigitavel);
+  end;
+end;
+
+procedure TfrmMain.btnImprimeClick(Sender: TObject);
+var
+  ModuloImp: IImpressaoBoleto;
+  Arquivo: string;
+begin
+  Arquivo := '..\..\Report\Boleto.fr3';
+  if FContainer.Boletos.Count > 0 then  //verifica se tem boleto na lista
+  begin
+    ModuloImp := TImpressaoBoletoFast.Create(Arquivo);
+    FContainer.SetModuloImpressao(ModuloImp);
+    FContainer.Imprimir;
   end;
 end;
 
@@ -159,6 +179,9 @@ begin
     EspecMoeda := 'R$';
     EspecDoc := 'DM';
     Valor := StrToCurr(edValor.Text);
+    Instrucoes.Add('Será Cobrado R$ 1,00 de juros por dia de atraso');
+    Instrucoes.Add('Multa de R$ 50,00 após vencimento');
+    Instrucoes.Add('Outras instruções...');
   end;
   with ABoleto.GetPagador do
   begin
