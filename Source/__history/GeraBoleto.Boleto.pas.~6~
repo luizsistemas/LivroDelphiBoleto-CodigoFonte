@@ -15,20 +15,14 @@ type
     function GetCampoLivre: string;
     function GetCodigoBarras: string;
     function GetLinhaDigitavel: string;
-    function GetNossoNumeroFormatado: string;
-    function GetCodBeneficiarioFormatado: string;
     procedure SetCampoLivre(Value: string);
     procedure SetCodigoBarras(Value: string);
     procedure SetLinhaDigitavel(Value: string);
-    procedure SetNossoNumeroFormatado(Value: string);
-    procedure SetCodBeneficiarioFormatado(Value: string);
     procedure Gerar;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
   private
-    FNossoNumeroFormatado: string;
-    FCodBeneficiarioFormatado: string;
     FCampoLivre: string;
     FCodigoBarras: string;
     FLinhaDigitavel: string;
@@ -50,12 +44,6 @@ type
     procedure SetCampoLivre(Value: string);
     procedure SetCodigoBarras(Value: string);
     procedure SetLinhaDigitavel(Value: string);
-    // formatação específica para a impressão *************
-    function GetNossoNumeroFormatado: string;
-    function GetCodBeneficiarioFormatado: string;
-    procedure SetNossoNumeroFormatado(Value: string);
-    procedure SetCodBeneficiarioFormatado(Value: string);
-    //*****************************************************
     procedure Gerar;
   end;
 
@@ -114,16 +102,6 @@ begin
   Result := FConta;
 end;
 
-function TBoleto.GetCodBeneficiarioFormatado: string;
-begin
-  Result := FCodBeneficiarioFormatado;
-end;
-
-function TBoleto.GetNossoNumeroFormatado: string;
-begin
-  Result := FNossoNumeroFormatado;
-end;
-
 function TBoleto.GetLinhaDigitavel: string;
 begin
   Result := FLinhaDigitavel;
@@ -144,11 +122,6 @@ begin
   FCampoLivre := Value;
 end;
 
-procedure TBoleto.SetCodBeneficiarioFormatado(Value: string);
-begin
-  FCodBeneficiarioFormatado := Value;
-end;
-
 procedure TBoleto.SetCodigoBarras(Value: string);
 begin
   FCodigoBarras := Value;
@@ -157,11 +130,6 @@ end;
 procedure TBoleto.SetLinhaDigitavel(Value: string);
 begin
   FLinhaDigitavel := Value;
-end;
-
-procedure TBoleto.SetNossoNumeroFormatado(Value: string);
-begin
-  FNossoNumeroFormatado := Value;
 end;
 
 end.

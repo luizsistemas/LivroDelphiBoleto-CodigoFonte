@@ -60,7 +60,7 @@ begin
   Dm.BoletosBancoDigito.AsString := ABoleto.GetConta.Banco.DigitoNumero;
 
   Dm.BoletosContaLocalPagto.AsString := ABoleto.GetConta.LocalPagto;
-  Dm.BoletosContaCodBeneficiario.AsString := ABoleto.GetCodBeneficiarioFormatado;
+  Dm.BoletosContaCodBeneficiario.AsString := ABoleto.GetConta.Conta;
   Dm.BoletosContaCarteira.AsString := ABoleto.GetConta.Carteira;
 
   Dm.BoletosBenCnpjCpf.AsString := ABoleto.GetBeneficiario.CnpjCpf;
@@ -75,7 +75,7 @@ begin
   Dm.BoletosTitData.AsDateTime := ABoleto.GetTitulo.Emissao;
   Dm.BoletosTitVencimento.AsDateTime := ABoleto.GetTitulo.Vencto;
   Dm.BoletosTitDataProc.AsDateTime := ABoleto.GetTitulo.DataProc;
-  Dm.BoletosTitNossoNumero.AsString := ABoleto.GetNossoNumeroFormatado;
+  Dm.BoletosTitNossoNumero.AsString := ABoleto.GetTitulo.NossoNum;
   Dm.BoletosTitDocumento.AsString := ABoleto.GetTitulo.Documento;
   Dm.BoletosTitAceite.AsString := ABoleto.GetTitulo.Aceite;
   Dm.BoletosTitEspecDoc.AsString := ABoleto.GetTitulo.EspecDoc;

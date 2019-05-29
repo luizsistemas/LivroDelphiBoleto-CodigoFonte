@@ -5,6 +5,7 @@ interface
 uses GeraBoleto.Boleto, GeraBoleto.Base;
 
 const
+  NOME_BANCO = 'Banco do Brasil';
   DIGITO_NUM = '9';
 
 type
@@ -23,17 +24,12 @@ type
     class function GetFormatacaoCampoLivre(AConvenio: string): IFormataCampoLivre;
   end;
 
-  TBBConvenio4 = class(TInterfacedObject, IFormataCampoLivre)
+  TBBNossoNum11Posicoes = class(TInterfacedObject, IFormataCampoLivre)
   public
     procedure Formata(ABoleto: IBoleto);
   end;
 
-  TBBConvenio6 = class(TInterfacedObject, IFormataCampoLivre)
-  public
-    procedure Formata(ABoleto: IBoleto);
-  end;
-
-  TBBConvenio7 = class(TInterfacedObject, IFormataCampoLivre)
+  TBBNossoNum17Posicoes = class(TInterfacedObject, IFormataCampoLivre)
   public
     procedure Formata(ABoleto: IBoleto);
   end;
@@ -71,20 +67,19 @@ end;
 class function TFactoryBBFormata.GetFormatacaoCampoLivre(AConvenio: string): IFormataCampoLivre;
 begin
   case AConvenio.Length of
-    4: Result := TBBConvenio4.Create;
-    6: Result := TBBConvenio6.Create;
-    7: Result := TBBConvenio7.Create;
+    4, 6: Result := TBBNossoNum11Posicoes.Create;
+    7: Result := TBBNossoNum17Posicoes.Create;
   else
     raise Exception.Create('Convênio inválido!');
   end;
 end;
 
-{ TBBConvenio4 }
+{ TBBNossoNum11Posicoes }
 
-procedure TBBConvenio4.Formata(ABoleto: IBoleto);
+procedure TBBNossoNum11Posicoes.Formata(ABoleto: IBoleto);
 begin
   ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
-      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 7);
+      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 11 - Length(ABoleto.GetConta.Convenio));
 
   ABoleto.GetTitulo.DigitoNossoNum := Modulo11BB(ABoleto.GetTitulo.NossoNum);
 
@@ -92,27 +87,14 @@ begin
     ABoleto.GetConta.Conta + ABoleto.GetConta.Carteira );
 end;
 
-{ TBBConvenio6 }
+{ TBBNossoNum17Posicoes }
 
-procedure TBBConvenio6.Formata(ABoleto: IBoleto);
+procedure TBBNossoNum17Posicoes.Formata(ABoleto: IBoleto);
 begin
   ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
-      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 5);
+      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 10);
 
-  ABoleto.GetTitulo.DigitoNossoNum := Modulo11BB(ABoleto.GetTitulo.NossoNum);
-
-  ABoleto.SetCampoLivre( ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Agencia +
-    ABoleto.GetConta.Conta + ABoleto.GetConta.Carteira );
-end;
-
-{ TBBConvenio7 }
-
-procedure TBBConvenio7.Formata(ABoleto: IBoleto);
-begin
-//  ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
-//      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 10);
-//
-//  ABoleto.SetCampoLivre( LeftPad('0', 6) + ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Carteira );
+  ABoleto.SetCampoLivre( LeftPad('0', 6) + ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Carteira );
 end;
 
 { TFormata001 }
@@ -131,6 +113,7 @@ end;
 
 procedure TFormata001.FormataCamposConta;
 begin
+  FBoleto.GetConta.Banco.Nome := NOME_BANCO;
   FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
   FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
 end;
@@ -141,6 +124,9 @@ begin
     raise Exception.Create('Dígito do Número do Banco inválido!');
   if not IsNumber( FBoleto.GetConta.Conta ) then
     raise Exception.Create('Número da Conta inválido!');
+  if not (FBoleto.GetConta.Carteira.Length = 2)  or
+    not IsNumber(FBoleto.GetConta.Carteira) then
+    raise Exception.Create('Carteira inválida!');
 end;
 
 end.

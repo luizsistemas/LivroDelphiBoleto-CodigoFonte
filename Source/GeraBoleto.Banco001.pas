@@ -105,10 +105,15 @@ begin
 end;
 
 procedure TFormata001.FormataCampoLivre;
+var
+  NossoNumero: string;
 begin
-  TFactoryBBFormata.
-    GetFormatacaoCampoLivre(FBoleto.GetConta.Convenio).
-    Formata(FBoleto);
+  TFactoryBBFormata.GetFormatacaoCampoLivre(FBoleto.GetConta.Convenio).Formata(FBoleto);
+
+  NossoNumero := FBoleto.GetTitulo.NossoNum;
+  if FBoleto.GetTitulo.DigitoNossoNum <> '' then
+    NossoNumero := NossoNumero + '-' + FBoleto.GetTitulo.DigitoNossoNum;
+  FBoleto.SetNossoNumeroFormatado(NossoNumero);
 end;
 
 procedure TFormata001.FormataCamposConta;
@@ -116,6 +121,11 @@ begin
   FBoleto.GetConta.Banco.Nome := NOME_BANCO;
   FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
   FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
+
+  FBoleto.SetCodBeneficiarioFormatado(
+    FBoleto.GetConta.Agencia + '-' + FBoleto.GetConta.DigitoAgencia + '/' +
+      FBoleto.GetConta.Conta + '-' + FBoleto.GetConta.DigitoConta
+  );
 end;
 
 procedure TFormata001.ValidaDados;

@@ -43,11 +43,6 @@ begin
   FBoleto.GetTitulo.DigitoNossoNum := DigitoNossoNumBradesco;
   FBoleto.SetCampoLivre( FBoleto.GetConta.Agencia +  FBoleto.GetConta.Carteira +
     FBoleto.GetTitulo.NossoNum + FBoleto.GetConta.Conta + '0');
-
-  FBoleto.SetNossoNumeroFormatado(
-    FBoleto.GetConta.Carteira + ' / ' + FBoleto.GetTitulo.NossoNum + '-' +
-    FBoleto.GetTitulo.DigitoNossoNum
-  );
 end;
 
 procedure TFormata237.FormataCamposConta;
@@ -55,11 +50,6 @@ begin
   FBoleto.GetConta.Banco.Nome := NOME_BANCO;
   FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
   FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 7);
-
-  FBoleto.SetCodBeneficiarioFormatado(
-    FBoleto.GetConta.Agencia + '-' + FBoleto.GetConta.DigitoAgencia + '/' +
-      FBoleto.GetConta.Conta + '-' + FBoleto.GetConta.DigitoConta
-  );
 end;
 
 procedure TFormata237.ValidaDados;

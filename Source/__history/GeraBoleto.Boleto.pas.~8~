@@ -1,4 +1,4 @@
-unit GeraBoleto.Boleto;
+ï»¿unit GeraBoleto.Boleto;
 
 interface
 
@@ -15,20 +15,18 @@ type
     function GetCampoLivre: string;
     function GetCodigoBarras: string;
     function GetLinhaDigitavel: string;
-    function GetNossoNumeroFormatado: string;
-    function GetCodBeneficiarioFormatado: string;
+    function GetFormatoImpressoNossoNumero: string;
+    function GetFormatoImpressoCodBeneficiario: string;
     procedure SetCampoLivre(Value: string);
     procedure SetCodigoBarras(Value: string);
     procedure SetLinhaDigitavel(Value: string);
-    procedure SetNossoNumeroFormatado(Value: string);
-    procedure SetCodBeneficiarioFormatado(Value: string);
     procedure Gerar;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
   private
     FNossoNumeroFormatado: string;
-    FCodBeneficiarioFormatado: string;
+    FFormatoImpressoCodBeneficiario: string;
     FCampoLivre: string;
     FCodigoBarras: string;
     FLinhaDigitavel: string;
@@ -47,15 +45,11 @@ type
     function GetCampoLivre: string;
     function GetCodigoBarras: string;
     function GetLinhaDigitavel: string;
+    function GetNossoNumeroFormatado: string;
+    function GetCodBeneficiarioFormatado: string;
     procedure SetCampoLivre(Value: string);
     procedure SetCodigoBarras(Value: string);
     procedure SetLinhaDigitavel(Value: string);
-    // formatação específica para a impressão *************
-    function GetNossoNumeroFormatado: string;
-    function GetCodBeneficiarioFormatado: string;
-    procedure SetNossoNumeroFormatado(Value: string);
-    procedure SetCodBeneficiarioFormatado(Value: string);
-    //*****************************************************
     procedure Gerar;
   end;
 
@@ -116,7 +110,7 @@ end;
 
 function TBoleto.GetCodBeneficiarioFormatado: string;
 begin
-  Result := FCodBeneficiarioFormatado;
+  Result := FFormatoImpressoCodBeneficiario;
 end;
 
 function TBoleto.GetNossoNumeroFormatado: string;
@@ -144,11 +138,6 @@ begin
   FCampoLivre := Value;
 end;
 
-procedure TBoleto.SetCodBeneficiarioFormatado(Value: string);
-begin
-  FCodBeneficiarioFormatado := Value;
-end;
-
 procedure TBoleto.SetCodigoBarras(Value: string);
 begin
   FCodigoBarras := Value;
@@ -157,11 +146,6 @@ end;
 procedure TBoleto.SetLinhaDigitavel(Value: string);
 begin
   FLinhaDigitavel := Value;
-end;
-
-procedure TBoleto.SetNossoNumeroFormatado(Value: string);
-begin
-  FNossoNumeroFormatado := Value;
 end;
 
 end.
