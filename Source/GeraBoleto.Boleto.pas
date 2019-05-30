@@ -91,6 +91,7 @@ begin
     .FormataCampoLivre
     .FormataCodigoBarras
     .FormataLinhaDigitavel
+    .FormataCamposParaImpressao
     .Criar;
 end;
 

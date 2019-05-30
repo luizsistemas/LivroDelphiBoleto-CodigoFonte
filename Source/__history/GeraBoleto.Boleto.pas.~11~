@@ -1,9 +1,9 @@
-unit BeraBoleto.Boleto;
+unit GeraBoleto.Boleto;
 
 interface
 
 uses
-  Pessoa, Conta, Titulo;
+  GeraBoleto.Pessoa, GeraBoleto.Conta, GeraBoleto.Titulo;
 
 type
   IBoleto = interface
@@ -13,19 +13,25 @@ type
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
     function GetCampoLivre: string;
-    function GetLinhaDigitavel: string;
     function GetCodigoBarras: string;
+    function GetLinhaDigitavel: string;
+    function GetNossoNumeroFormatado: string;
+    function GetCodBeneficiarioFormatado: string;
     procedure SetCampoLivre(Value: string);
-    procedure SetLinhaDigitavel(Value: string);
     procedure SetCodigoBarras(Value: string);
+    procedure SetLinhaDigitavel(Value: string);
+    procedure SetNossoNumeroFormatado(Value: string);
+    procedure SetCodBeneficiarioFormatado(Value: string);
     procedure Gerar;
   end;
 
   TBoleto = class (TInterfacedObject, IBoleto)
   private
-    FLinhaDigitavel: string;
-    FCodigoBarras: string;
+    FNossoNumeroFormatado: string;
+    FCodBeneficiarioFormatado: string;
     FCampoLivre: string;
+    FCodigoBarras: string;
+    FLinhaDigitavel: string;
   protected
     FBeneficiario: TPessoa;
     FConta: TConta;
@@ -39,17 +45,23 @@ type
     function GetPagador: TPessoa;
     function GetTitulo: TTitulo;
     function GetCampoLivre: string;
-    function GetLinhaDigitavel: string;
     function GetCodigoBarras: string;
+    function GetLinhaDigitavel: string;
     procedure SetCampoLivre(Value: string);
-    procedure SetLinhaDigitavel(Value: string);
     procedure SetCodigoBarras(Value: string);
+    procedure SetLinhaDigitavel(Value: string);
+    // formatação específica para a impressão *************
+    function GetNossoNumeroFormatado: string;
+    function GetCodBeneficiarioFormatado: string;
+    procedure SetNossoNumeroFormatado(Value: string);
+    procedure SetCodBeneficiarioFormatado(Value: string);
+    //*****************************************************
     procedure Gerar;
   end;
 
 implementation
 
-uses Base, FactoryBoleto;
+uses GeraBoleto.Base, GeraBoleto.Factories;
 
 { TBoleto }
 
@@ -102,6 +114,16 @@ begin
   Result := FConta;
 end;
 
+function TBoleto.GetCodBeneficiarioFormatado: string;
+begin
+  Result := FCodBeneficiarioFormatado;
+end;
+
+function TBoleto.GetNossoNumeroFormatado: string;
+begin
+  Result := FNossoNumeroFormatado;
+end;
+
 function TBoleto.GetLinhaDigitavel: string;
 begin
   Result := FLinhaDigitavel;
@@ -122,6 +144,11 @@ begin
   FCampoLivre := Value;
 end;
 
+procedure TBoleto.SetCodBeneficiarioFormatado(Value: string);
+begin
+  FCodBeneficiarioFormatado := Value;
+end;
+
 procedure TBoleto.SetCodigoBarras(Value: string);
 begin
   FCodigoBarras := Value;
@@ -130,6 +157,11 @@ end;
 procedure TBoleto.SetLinhaDigitavel(Value: string);
 begin
   FLinhaDigitavel := Value;
+end;
+
+procedure TBoleto.SetNossoNumeroFormatado(Value: string);
+begin
+  FNossoNumeroFormatado := Value;
 end;
 
 end.

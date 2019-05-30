@@ -2,7 +2,12 @@ unit GeraBoleto.Base;
 
 interface
 
-uses GeraBoleto.Boleto, SysUtils, GeraBoleto.Funcoes;
+uses
+  GeraBoleto.Boleto,
+    GeraBoleto.Conta, GeraBoleto.Titulo;
+
+const
+  MOEDA = '9';
 
 type
   IFormataCampoLivre = interface
@@ -29,8 +34,9 @@ type
 
   TGeraBoletoBuilder = class(TInterfacedObject, IGeraBoletoBuilder)
   private
-    FCampoLivre: string;
     FBoleto: IBoleto;
+    FConta: TConta;
+    FTitulo: TTitulo;
     FormatadorBanco: IFormatacao;
   public
     constructor Create(ABoleto: IBoleto);
@@ -42,17 +48,18 @@ type
     function Criar: Boolean;
   end;
 
-
 implementation
 
-{ TBBFormata }
+{ TGeraBoletoBuilder }
 
 uses
-  GeraBoleto.Factories;
+  GeraBoleto.Factories, SysUtils, GeraBoleto.Funcoes;
 
 constructor TGeraBoletoBuilder.Create(ABoleto: IBoleto);
 begin
   FBoleto := ABoleto;
+  FConta := FBoleto.GetConta;
+  FTitulo := FBoleto.GetTitulo;
   FormatadorBanco := TFactoryBoleto.GetFormatter(ABoleto);
 end;
 
@@ -68,12 +75,41 @@ begin
 end;
 
 function TGeraBoletoBuilder.FormataCodigoBarras: IGeraBoletoBuilder;
+var
+  CodigoBarras: string;
+  DigitoCodBarra: string;
 begin
+  CodigoBarras := FConta.Banco.Numero + MOEDA + FatorVencimento(FTitulo.Vencto) +
+    FormatFloat('0000000000', FTitulo.Valor * 100) + FBoleto.GetCampoLivre;
+  DigitoCodBarra := CalcDigitoVerificadorCodBarras(CodigoBarras);
+  Insert(DigitoCodBarra, CodigoBarras, 5);
+  FBoleto.SetCodigoBarras(CodigoBarras);
   Result := Self;
 end;
 
 function TGeraBoletoBuilder.FormataLinhaDigitavel: IGeraBoletoBuilder;
+var
+  Campos: array[1..5] of string;
+
+  function GetCampoFmt(Texto: string): string;
+  var
+    Dv: string;
+  begin
+    Result := Texto;
+    Dv := Modulo10(Result);
+    Result := Result + Dv;
+    Insert('.', Result, 6);
+  end;
 begin
+  Campos[1] := GetCampoFmt(FConta.Banco.Numero + MOEDA + Copy(FBoleto.GetCodigoBarras, 20, 5));
+  Campos[2] := GetCampoFmt(Copy(FBoleto.GetCodigoBarras, 25, 10));
+  Campos[3] := GetCampoFmt(Copy(FBoleto.GetCodigoBarras, 35, 10));
+  Campos[4] := FBoleto.GetCodigoBarras[5];
+  Campos[5] := Copy(FBoleto.GetCodigoBarras, 6, 14);
+
+  FBoleto.SetLinhaDigitavel(Campos[1] + ' ' + Campos[2] + ' ' + Campos[3] + ' ' + Campos[4]
+    + ' ' + Campos[5]);
+
   Result := Self;
 end;
 
@@ -85,8 +121,9 @@ end;
 
 function TGeraBoletoBuilder.ValidaDados: IGeraBoletoBuilder;
 begin
+  FormatadorBanco.ValidaDados;
   Result := Self;
 end;
 
-
 end.
+

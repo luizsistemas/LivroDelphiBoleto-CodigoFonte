@@ -5,6 +5,7 @@ interface
 uses GeraBoleto.Boleto, GeraBoleto.Base;
 
 const
+  NOME_BANCO = 'Banco do Brasil';
   DIGITO_NUM = '9';
 
 type
@@ -90,10 +91,10 @@ end;
 
 procedure TBBNossoNum17Posicoes.Formata(ABoleto: IBoleto);
 begin
-//  ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
-//      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 10);
-//
-//  ABoleto.SetCampoLivre( LeftPad('0', 6) + ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Carteira );
+  ABoleto.GetTitulo.NossoNum := ABoleto.GetConta.Convenio +
+      LeftPad(ABoleto.GetConta.SeqNossoNumero.ToString, 10);
+
+  ABoleto.SetCampoLivre( LeftPad('0', 6) + ABoleto.GetTitulo.NossoNum + ABoleto.GetConta.Carteira );
 end;
 
 { TFormata001 }
@@ -104,16 +105,27 @@ begin
 end;
 
 procedure TFormata001.FormataCampoLivre;
+var
+  NossoNumero: string;
 begin
-  TFactoryBBFormata.
-    GetFormatacaoCampoLivre(FBoleto.GetConta.Convenio).
-    Formata(FBoleto);
+  TFactoryBBFormata.GetFormatacaoCampoLivre(FBoleto.GetConta.Convenio).Formata(FBoleto);
+
+  NossoNumero := FBoleto.GetTitulo.NossoNum;
+  if FBoleto.GetTitulo.DigitoNossoNum <> '' then
+    NossoNumero := NossoNumero + '-' + FBoleto.GetTitulo.DigitoNossoNum;
+  FBoleto.SetNossoNumeroFormatado(NossoNumero);
 end;
 
 procedure TFormata001.FormataCamposConta;
 begin
+  FBoleto.GetConta.Banco.Nome := NOME_BANCO;
   FBoleto.GetConta.Agencia := LeftPad(FBoleto.GetConta.Agencia, 4);
   FBoleto.GetConta.Conta := LeftPad(FBoleto.GetConta.Conta, 8);
+
+  FBoleto.SetCodBeneficiarioFormatado(
+    FBoleto.GetConta.Agencia + '-' + FBoleto.GetConta.DigitoAgencia + '/' +
+      FBoleto.GetConta.Conta + '-' + FBoleto.GetConta.DigitoConta
+  );
 end;
 
 procedure TFormata001.ValidaDados;
@@ -122,6 +134,9 @@ begin
     raise Exception.Create('Dígito do Número do Banco inválido!');
   if not IsNumber( FBoleto.GetConta.Conta ) then
     raise Exception.Create('Número da Conta inválido!');
+  if not (FBoleto.GetConta.Carteira.Length = 2)  or
+    not IsNumber(FBoleto.GetConta.Carteira) then
+    raise Exception.Create('Carteira inválida!');
 end;
 
 end.

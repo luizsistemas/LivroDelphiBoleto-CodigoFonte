@@ -24,6 +24,8 @@ implementation
 constructor TImpressaoBoletoFast.Create(AReportFile: string);
 begin
   Dm := TdmBoletoFastReport.Create(nil);
+  Dm.Boletos.Close;
+  Dm.Boletos.Open;
   FReportFile := AReportFile;
   if FReportFile.IsEmpty then
     raise Exception.Create('Arquivo do FastReport não informado!');

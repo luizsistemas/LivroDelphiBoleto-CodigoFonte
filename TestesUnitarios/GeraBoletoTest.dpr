@@ -34,7 +34,8 @@ uses
   TestContainerBoleto in 'TestContainerBoleto.pas',
   GeraBoleto.Impressao in '..\Source\GeraBoleto.Impressao.pas',
   udmBoletoFastReport in '..\Source\udmBoletoFastReport.pas' {dmBoletoFastReport: TDataModule},
-  GeraBoleto.Impressao.FastReport in '..\Source\GeraBoleto.Impressao.FastReport.pas';
+  GeraBoleto.Impressao.FastReport in '..\Source\GeraBoleto.Impressao.FastReport.pas',
+  udmDadosBoleto in '..\Source\udmDadosBoleto.pas' {dmDadosBoleto: TDataModule};
 
 {$R *.RES}
 

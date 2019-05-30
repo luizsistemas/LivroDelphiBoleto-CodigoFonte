@@ -24,6 +24,8 @@ implementation
 constructor TImpressaoBoletoFast.Create(AReportFile: string);
 begin
   Dm := TdmBoletoFastReport.Create(nil);
+  Dm.Boletos.Close;
+  Dm.Boletos.Open;
   FReportFile := AReportFile;
   if FReportFile.IsEmpty then
     raise Exception.Create('Arquivo do FastReport não informado!');
@@ -43,7 +45,7 @@ var
   I: Integer;
 begin
   for I := 0 to ABoletos.Count - 1 do
-    Dm.AdicionaDadosNoMemTable(ABoletos[I]);
+    Dm.AdicionaDadosNoDataModule(ABoletos[I]);
 
   Dm.Report.LoadFromFile(FReportFile);
   Dm.Report.ShowReport;
