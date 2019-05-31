@@ -111,6 +111,11 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="..\Source\GeraBoleto.Impressao.Fortes.pas"/>
+        <DCCReference Include="..\Source\ufrmBoletoFortesReport.pas">
+            <Form>frmBoletoFortesReport</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <None Include="ModelSupport_GeraBoletoTest\default.txaPackage"/>
         <None Include="ModelSupport_GeraBoletoTest\default.txvpck"/>
         <None Include="ModelSupport_GeraBoletoTest\Banco\default.txvpck"/>

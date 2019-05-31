@@ -1,0 +1,164 @@
+unit ufrmBoletoFortesReport;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms,
+  Vcl.Dialogs, RLBarcode, RLReport, Data.DB, RLParser;
+
+type
+  TfrmFortes = class(TForm)
+    BoletoFortes: TRLReport;
+    RLBandPrin: TRLBand;
+    RLDraw79: TRLDraw;
+    RLDraw80: TRLDraw;
+    RLDraw84: TRLDraw;
+    RLDraw85: TRLDraw;
+    RLDraw86: TRLDraw;
+    RLDraw87: TRLDraw;
+    RLDraw88: TRLDraw;
+    RLDraw89: TRLDraw;
+    RLDraw91: TRLDraw;
+    RLDraw92: TRLDraw;
+    RLDraw93: TRLDraw;
+    RLLabel12: TRLLabel;
+    RLLabel17: TRLLabel;
+    RLLabel22: TRLLabel;
+    RLLabel24: TRLLabel;
+    RLLabel26: TRLLabel;
+    RLLabel34: TRLLabel;
+    RLLabel53: TRLLabel;
+    RLLabel58: TRLLabel;
+    RLLabel59: TRLLabel;
+    RLLabel60: TRLLabel;
+    RLLabel61: TRLLabel;
+    RLLabel63: TRLLabel;
+    RLLabel64: TRLLabel;
+    RLLabel93: TRLLabel;
+    RLLabel100: TRLLabel;
+    RLLabel104: TRLLabel;
+    RLLabel106: TRLLabel;
+    RLLabel108: TRLLabel;
+    RLLabel110: TRLLabel;
+    RLLabel112: TRLLabel;
+    RLLabel114: TRLLabel;
+    RLLabel116: TRLLabel;
+    RLDraw95: TRLDraw;
+    RLLabel118: TRLLabel;
+    RLDraw96: TRLDraw;
+    RLDraw97: TRLDraw;
+    RLDraw98: TRLDraw;
+    RLDraw99: TRLDraw;
+    RLDraw100: TRLDraw;
+    RLDraw101: TRLDraw;
+    RLDraw102: TRLDraw;
+    RLDraw103: TRLDraw;
+    RLDraw104: TRLDraw;
+    RLDraw105: TRLDraw;
+    RLDraw106: TRLDraw;
+    RLDraw107: TRLDraw;
+    RLDraw108: TRLDraw;
+    RLDraw109: TRLDraw;
+    RLDraw110: TRLDraw;
+    RLDraw111: TRLDraw;
+    lbNumBanco2: TRLLabel;
+    RLLabel120: TRLLabel;
+    RLLabel122: TRLLabel;
+    RLDraw112: TRLDraw;
+    RLLabel125: TRLLabel;
+    RLLabel127: TRLLabel;
+    RLLabel129: TRLLabel;
+    RLLabel131: TRLLabel;
+    RLLabel133: TRLLabel;
+    RLLabel134: TRLLabel;
+    RLLabel136: TRLLabel;
+    RLLabel137: TRLLabel;
+    txtUsoBancoRecTop1: TRLLabel;
+    RLLabel140: TRLLabel;
+    RLLabel141: TRLLabel;
+    RLLabel142: TRLLabel;
+    RLLabel143: TRLLabel;
+    RLLabel144: TRLLabel;
+    RLLabel170: TRLLabel;
+    RLLabel172: TRLLabel;
+    RLLabel173: TRLLabel;
+    RLLabel174: TRLLabel;
+    RLLabel176: TRLLabel;
+    RLLabel177: TRLLabel;
+    RLLabel179: TRLLabel;
+    RLLabel180: TRLLabel;
+    bcCodigoBarras: TRLBarcode;
+    RLDraw114: TRLDraw;
+    RLDraw115: TRLDraw;
+    RLDraw94: TRLDraw;
+    RLLabel65: TRLLabel;
+    RLDraw90: TRLDraw;
+    RLDraw113: TRLDraw;
+    RLDBText1: TRLDBText;
+    lbNumBanco1: TRLLabel;
+    RLDBText2: TRLDBText;
+    RLDBText4: TRLDBText;
+    RLDBText5: TRLDBText;
+    RLDBText6: TRLDBText;
+    RLDBText7: TRLDBText;
+    RLDBText8: TRLDBText;
+    RLDBText9: TRLDBText;
+    RLDBText10: TRLDBText;
+    RLDBText11: TRLDBText;
+    RLDBText12: TRLDBText;
+    RLLabel62: TRLLabel;
+    RLDBText13: TRLDBText;
+    RLDBText16: TRLDBText;
+    RLDBText17: TRLDBText;
+    RLDBText18: TRLDBText;
+    RLDBText19: TRLDBText;
+    RLDBText20: TRLDBText;
+    RLLabel181: TRLLabel;
+    RLDBText21: TRLDBText;
+    RLDBText22: TRLDBText;
+    RLDBText24: TRLDBText;
+    RLDBText26: TRLDBText;
+    RLDBMemo1: TRLDBMemo;
+    RLDBText27: TRLDBText;
+    RLDBText28: TRLDBText;
+    RLExpressionParser1: TRLExpressionParser;
+    RLDBText29: TRLDBText;
+    RLDBText30: TRLDBText;
+    RLDBMemo2: TRLDBMemo;
+    RLDBText3: TRLDBText;
+    RLDBText14: TRLDBText;
+    RLDBText15: TRLDBText;
+    RLDBText23: TRLDBText;
+    RLDBText31: TRLDBText;
+    dsConta: TDataSource;
+    dsBeneficiario: TDataSource;
+    dsPagador: TDataSource;
+    dsValores: TDataSource;
+    dsBoleto: TDataSource;
+    procedure RLBandPrinBeforePrint(Sender: TObject; var PrintIt: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+uses Curso.Boleto.DM;
+
+{$R *.dfm}
+
+procedure TfrmFortes.RLBandPrinBeforePrint(Sender: TObject;
+  var PrintIt: Boolean);
+var
+  NumBanco: string;
+begin
+  NumBanco := dsConta.DataSet.FieldByName('Numerobanco').AsString +
+    '-' + dsConta.DataSet.FieldByName('DigitoNumBanco').AsString;
+  lbNumBanco1.Caption := NumBanco;
+  lbNumBanco2.Caption := NumBanco;
+  bcCodigoBarras.Caption := dsBoleto.DataSet.FieldByName('CodigoBarras').AsString;
+end;
+
+end.

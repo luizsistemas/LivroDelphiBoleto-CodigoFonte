@@ -1,8 +1,8 @@
 object dmDadosBoleto: TdmDadosBoleto
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 186
-  Width = 334
+  Height = 464
+  Width = 501
   object Boletos: TFDMemTable
     FetchOptions.AssignedValues = [evMode]
     FetchOptions.Mode = fmAll

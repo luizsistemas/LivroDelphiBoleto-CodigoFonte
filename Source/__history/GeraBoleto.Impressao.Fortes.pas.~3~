@@ -1,0 +1,22 @@
+unit GeraBoleto.Impressao.Fortes;
+
+interface
+
+uses
+  GeraBoleto.Impressao, udmDadosBoleto, System.Generics.Collections,
+  GeraBoleto.Boleto;
+
+type
+  TImpressaoBoletoFast = class(TInterfacedObject, IImpressaoBoleto)
+  private
+    FReportFile: string;
+    Dm: TdmDadosBoleto;
+  public
+    constructor Create(AReportFile: string);
+    destructor Destroy; override;
+    procedure Imprime(ABoletos: TList<IBoleto>);
+  end;
+
+implementation
+
+end.

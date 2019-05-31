@@ -1,0 +1,7 @@
+unit GeraBoleto.Impressao.Fortes;
+
+interface
+
+implementation
+
+end.

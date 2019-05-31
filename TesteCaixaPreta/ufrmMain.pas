@@ -95,7 +95,7 @@ var
 implementation
 
 uses
-  GeraBoleto.Impressao.FastReport, GeraBoleto.Impressao;
+  GeraBoleto.Impressao.FastReport, GeraBoleto.Impressao, GeraBoleto.Impressao.Fortes;
 
 {$R *.dfm}
 
@@ -133,7 +133,7 @@ begin
   Arquivo := '..\..\Report\Boleto.fr3';
   if FContainer.Boletos.Count > 0 then  //verifica se tem boleto na lista
   begin
-    ModuloImp := TImpressaoBoletoFast.Create(Arquivo);
+    ModuloImp := TImpressaoBoletoFortes.Create;
     FContainer.SetModuloImpressao(ModuloImp);
     FContainer.Imprimir;
   end;
@@ -153,6 +153,7 @@ begin
     Endereco.Logradouro := edBenLogradouro.Text;
     Endereco.Numero := edBenNumero.Text;
     Endereco.Bairro := edBenBairro.Text;
+    Endereco.Cep := edBenCep.Text;
     Endereco.Cidade := edBenCidade.Text;
     Endereco.Uf := edBenUF.Text;
   end;
@@ -190,6 +191,7 @@ begin
     Endereco.Logradouro := edPagLogradouro.Text;
     Endereco.Numero := edPagNumero.Text;
     Endereco.Bairro := edPagBairro.Text;
+    Endereco.Cep := edPagCep.Text;
     Endereco.Cidade := edPagCidade.Text;
     Endereco.Uf := edPagUF.Text;
   end;

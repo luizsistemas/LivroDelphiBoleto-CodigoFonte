@@ -35,7 +35,9 @@ uses
   GeraBoleto.Impressao in '..\Source\GeraBoleto.Impressao.pas',
   udmBoletoFastReport in '..\Source\udmBoletoFastReport.pas' {dmBoletoFastReport: TDataModule},
   GeraBoleto.Impressao.FastReport in '..\Source\GeraBoleto.Impressao.FastReport.pas',
-  udmDadosBoleto in '..\Source\udmDadosBoleto.pas' {dmDadosBoleto: TDataModule};
+  udmDadosBoleto in '..\Source\udmDadosBoleto.pas' {dmDadosBoleto: TDataModule},
+  GeraBoleto.Impressao.Fortes in '..\Source\GeraBoleto.Impressao.Fortes.pas',
+  ufrmBoletoFortesReport in '..\Source\ufrmBoletoFortesReport.pas' {frmBoletoFortesReport};
 
 {$R *.RES}
 
