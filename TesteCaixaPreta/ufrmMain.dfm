@@ -2,7 +2,7 @@ object frmMain: TfrmMain
   Left = 0
   Top = 0
   Caption = 'Gera'#231#227'o de Boletos: Teste'
-  ClientHeight = 617
+  ClientHeight = 533
   ClientWidth = 646
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,49 +16,67 @@ object frmMain: TfrmMain
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 576
+    Top = 472
     Width = 646
-    Height = 41
+    Height = 61
     Align = alBottom
     TabOrder = 5
     object btnAdiciona: TButton
       Left = 1
       Top = 1
       Width = 89
-      Height = 39
+      Height = 59
       Align = alLeft
       Caption = 'Adiciona Boleto'
       TabOrder = 0
       OnClick = btnAdicionaClick
+      ExplicitHeight = 39
     end
     object btnExclui: TButton
       Left = 90
       Top = 1
       Width = 89
-      Height = 39
+      Height = 59
       Align = alLeft
       Caption = 'Exclui Boleto'
       TabOrder = 1
+      ExplicitHeight = 39
     end
     object btnImprime: TButton
       Left = 268
       Top = 1
       Width = 89
-      Height = 39
+      Height = 59
       Align = alLeft
       Caption = 'Imprime'
       TabOrder = 3
       OnClick = btnImprimeClick
+      ExplicitHeight = 39
     end
     object btnImpNoMemo: TButton
       Left = 179
       Top = 1
       Width = 89
-      Height = 39
+      Height = 59
       Align = alLeft
       Caption = 'Ver no Memo'
       TabOrder = 2
       OnClick = btnImpNoMemoClick
+      ExplicitHeight = 39
+    end
+    object rgModuloImpressao: TRadioGroup
+      Left = 357
+      Top = 1
+      Width = 156
+      Height = 59
+      Align = alLeft
+      Caption = 'M'#243'dulo de Impress'#227'o'
+      ItemIndex = 0
+      Items.Strings = (
+        'M'#243'dulo Fast Report'
+        'M'#243'dulo Fortes Report')
+      TabOrder = 4
+      ExplicitHeight = 47
     end
   end
   object GroupBox1: TGroupBox
@@ -747,8 +765,9 @@ object frmMain: TfrmMain
     Left = 0
     Top = 335
     Width = 646
-    Height = 241
+    Height = 137
     Align = alClient
     TabOrder = 4
+    ExplicitHeight = 241
   end
 end

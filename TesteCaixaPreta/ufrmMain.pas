@@ -78,6 +78,7 @@ type
     btnImprime: TButton;
     memObs: TMemo;
     btnImpNoMemo: TButton;
+    rgModuloImpressao: TRadioGroup;
     procedure FormCreate(Sender: TObject);
     procedure btnAdicionaClick(Sender: TObject);
     procedure btnImpNoMemoClick(Sender: TObject);
@@ -133,7 +134,10 @@ begin
   Arquivo := '..\..\Report\Boleto.fr3';
   if FContainer.Boletos.Count > 0 then  //verifica se tem boleto na lista
   begin
-    ModuloImp := TImpressaoBoletoFortes.Create;
+    case rgModuloImpressao.ItemIndex of
+      0: ModuloImp := TImpressaoBoletoFast.Create(Arquivo);
+      1: ModuloImp := TImpressaoBoletoFortes.Create;
+    end;
     FContainer.SetModuloImpressao(ModuloImp);
     FContainer.Imprimir;
   end;
