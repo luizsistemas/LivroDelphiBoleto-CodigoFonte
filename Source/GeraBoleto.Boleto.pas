@@ -32,7 +32,6 @@ type
     FCampoLivre: string;
     FCodigoBarras: string;
     FLinhaDigitavel: string;
-  protected
     FBeneficiario: TPessoa;
     FConta: TConta;
     FPagador: TPessoa;

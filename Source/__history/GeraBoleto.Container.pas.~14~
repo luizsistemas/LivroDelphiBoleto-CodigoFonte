@@ -1,0 +1,85 @@
+unit GeraBoleto.Container;
+
+interface
+
+uses
+  GeraBoleto.Boleto, System.Generics.Collections,
+    GeraBoleto.Impressao, SysUtils;
+
+type
+  IBoletoContainer = interface
+  ['{AA8EA86D-1213-4521-8392-D844B4C2AF04}']
+    function Add: IBoleto;
+    procedure Delete(Index: Integer);
+    function Boletos: TList<IBoleto>;
+    procedure SetModuloImpressao(Value: IImpressaoBoleto);
+    function GetModuloImpressao: IImpressaoBoleto;
+    procedure Imprimir;
+  end;
+
+  TBoletoContainer = class(TInterfacedObject, IBoletoContainer)
+  private
+    FBoletos: TList<IBoleto>;
+    FModuloImpressao: IImpressaoBoleto;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    function Add: IBoleto;
+    procedure Delete(Index: Integer);
+    function Boletos: TList<IBoleto>;
+    procedure SetModuloImpressao(Value: IImpressaoBoleto);
+    function GetModuloImpressao: IImpressaoBoleto;
+    procedure Imprimir;
+  end;
+
+implementation
+
+{ TBoletoContainer }
+
+constructor TBoletoContainer.Create;
+begin
+  FBoletos := TList<IBoleto>.Create;
+end;
+
+destructor TBoletoContainer.Destroy;
+begin
+  FBoletos.Free;
+  inherited;
+end;
+
+function TBoletoContainer.GetModuloImpressao: IImpressaoBoleto;
+begin
+  Result := FModuloIMpressao;
+end;
+
+function TBoletoContainer.Add: IBoleto;
+begin
+  Result := TBoleto.Create;
+  FBoletos.Add(Result);
+end;
+
+function TBoletoContainer.Boletos: TList<IBoleto>;
+begin
+  Result := nil; //FBoletos;
+end;
+
+procedure TBoletoContainer.Delete(Index: Integer);
+begin
+  if (Index + 1) <= FBoletos.Count then
+    FBoletos.Delete(Index);
+end;
+
+procedure TBoletoContainer.Imprimir;
+begin
+  if not Assigned(FModuloImpressao) then
+    raise Exception.Create('Módulo de Impressão não selecionado');
+
+  FModuloImpressao.Imprime(FBoletos);
+end;
+
+procedure TBoletoContainer.SetModuloImpressao(Value: IImpressaoBoleto);
+begin
+  FModuloImpressao := Value;
+end;
+
+end.

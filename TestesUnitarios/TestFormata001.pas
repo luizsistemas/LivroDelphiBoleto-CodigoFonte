@@ -18,9 +18,8 @@ type
     procedure TestDigitoDoNumeroDoBancoInvalido;
     procedure TestFormatacaoDoNumeroDaAgencia;
     procedure TestFormatacaoDoNumeroDaConta;
-    procedure TestFormatacaoDaCarteiraQuantidadeCaracteresInvalido;
     procedure TestFormatacaoDaCarteiraCaracteresInvalidos;
-    procedure TestNumeroDaContaComCarectereInvalido;
+    procedure TestFormatacaoDaCarteiraQuantidadeCaracteresInvalido;
     procedure TestFormatacaoCampoLivreParaConvenio4E6;
     procedure TestDigitoVerificadorDoNossoNumero;
     procedure TestFormatacaoCampoLivreParaConvenio7;
@@ -132,11 +131,6 @@ begin
   CheckEquals('0123', FBoleto.GetConta.Agencia, 'Agência com formato inválido!');
 end;
 
-procedure TestTFormata001.TestNumeroDaContaComCarectereInvalido;
-begin
-  StartExpectingException(exception);
-  FBoleto.GetConta.Conta := 'a123';
-  FBoleto.Gerar;  StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na conta');end;
 procedure TestTFormata001.TestFormatacaoDoNumeroDaConta;
 begin
   FBoleto.GetConta.Conta := '12345';

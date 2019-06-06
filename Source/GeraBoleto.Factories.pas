@@ -16,13 +16,10 @@ implementation
 uses
   GeraBoleto.Banco001, GeraBoleto.Banco237;
 
-{ TBoletoFactory }
+{ TFactoryBoleto }
 
 class function TFactoryBoleto.GetFormatter(ABoleto: IBoleto): IFormatacao;
 begin
-  if not IsNumber(ABoleto.GetConta.Banco.Numero) then
-    raise Exception.Create('Número do Banco inválido: ' + ABoleto.GetConta.Banco.Numero);
-
   case ABoleto.GetConta.Banco.Numero.ToInteger of
     1: Result := TFormata001.Create(ABoleto);
     237: Result := TFormata237.Create(ABoleto);

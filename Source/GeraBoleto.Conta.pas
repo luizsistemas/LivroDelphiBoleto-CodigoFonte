@@ -41,6 +41,9 @@ type
 
 implementation
 
+uses
+  GeraBoleto.Funcoes;
+
 { TConta }
 
 constructor TConta.Create;
@@ -57,11 +60,15 @@ end;
 procedure TConta.SetAgencia(const Value: string);
 begin
   FAgencia := Trim(Value);
+  if not IsNumber(FAgencia) then
+    raise Exception.Create('Número da Agência inválido');
 end;
 
 procedure TConta.SetConta(const Value: string);
 begin
   FConta := Trim(Value);
+  if not IsNumber(FConta) then
+    raise Exception.Create('Número da Conta inválido');
 end;
 
 procedure TConta.SetConvenio(const Value: string);

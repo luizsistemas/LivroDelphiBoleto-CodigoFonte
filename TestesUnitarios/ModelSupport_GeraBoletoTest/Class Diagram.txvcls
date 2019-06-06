@@ -5,8 +5,7 @@
     <property name="$name" value="Class Diagram" />
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Banco.TBanco">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="1260,540,167,193" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="1032,137,167,193" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Banco.TBanco.FNome" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Banco.TBanco.FDigitoNumero" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Banco.TBanco.FNumero" />
@@ -18,27 +17,27 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="596,1152,221,160" />
+      <property name="bounds" value="939,1576,221,175" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.FBoleto" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.Create(GeraBoleto.Boleto.IBoleto)" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.FormataCamposConta()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.ValidaDados()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.FormataCampoLivre()" />
       <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001:GeraBoleto.Base.IFormatacao">
-        <property name="sourceAnchor" value="596,1255" />
-        <property name="targetAnchor" value="428,1255" />
+        <property name="sourceAnchor" value="1118,1576" />
+        <property name="targetAnchor" value="1118,1372" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.FBoleto">
-        <property name="sourceAnchor" value="702,1152" />
-        <property name="targetAnchor" value="702,871" />
+        <property name="sourceAnchor" value="987,1576" />
+        <property name="targetAnchor" value="987,1455" />
         <property name="bendpoints" value="" />
       </reference>
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Banco001.TFormata001.FormataCamposParaImpressao()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="260,840,258,250" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="1013,643,310,265" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FCampoLivre" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FBoleto" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FConta" />
@@ -52,54 +51,54 @@
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FormataCodigoBarras()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.Criar()" />
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FormatadorBanco">
-        <property name="sourceAnchor" value="344,1090" />
-        <property name="targetAnchor" value="344,1200" />
+        <property name="sourceAnchor" value="1177,908" />
+        <property name="targetAnchor" value="1177,1246" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder:GeraBoleto.Base.IGeraBoletoBuilder">
-        <property name="sourceAnchor" value="279,840" />
-        <property name="targetAnchor" value="279,416" />
+        <property name="sourceAnchor" value="1013,775" />
+        <property name="targetAnchor" value="913,775" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FBoleto">
-        <property name="sourceAnchor" value="518,855" />
-        <property name="targetAnchor" value="620,855" />
+        <property name="sourceAnchor" value="1122,908" />
+        <property name="targetAnchor" value="994,1164" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FConta">
-        <property name="sourceAnchor" value="518,924" />
-        <property name="targetAnchor" value="960,924" />
+        <property name="sourceAnchor" value="1168,643" />
+        <property name="targetAnchor" value="836,458" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FTitulo">
-        <property name="sourceAnchor" value="449,840" />
-        <property name="targetAnchor" value="449,731" />
+        <property name="sourceAnchor" value="1067,908" />
+        <property name="targetAnchor" value="769,1224" />
         <property name="bendpoints" value="" />
       </reference>
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.TGeraBoletoBuilder.FormataCamposParaImpressao()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Base.IFormatacao">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="240,1200,188,111" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="1076,1246,202,126" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IFormatacao.FormataCamposConta()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IFormatacao.ValidaDados()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IFormatacao.FormataCampoLivre()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IFormatacao.FormataCamposParaImpressao()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="40,260,258,156" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="603,690,310,171" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.FormataCampos()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.ValidaDados()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.FormataCampoLivre()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.FormataCodigoBarras()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.FormataLinhaDigitavel()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.Criar()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IGeraBoletoBuilder.FormataCamposParaImpressao()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="680,80,168,385" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="336,538,227,475" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FLinhaDigitavel" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FCodigoBarras" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FCampoLivre" />
@@ -121,36 +120,42 @@
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.SetCodigoBarras(System.string)" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.Gerar()" />
       <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto:GeraBoleto.Boleto.IBoleto">
-        <property name="sourceAnchor" value="732,465" />
-        <property name="targetAnchor" value="732,640" />
-        <property name="bendpoints" value="" />
+        <property name="sourceAnchor" value="487,1013" />
+        <property name="targetAnchor" value="884,1164" />
+        <property name="bendpoints" value="884,1107" />
+        <property name="bounds_setted_by_user" value="True" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FConta">
-        <property name="sourceAnchor" value="848,425" />
-        <property name="targetAnchor" value="960,631" />
+        <property name="sourceAnchor" value="563,666" />
+        <property name="targetAnchor" value="781,458" />
         <property name="bendpoints" value="" />
         <property name="bounds_setted_by_user" value="True" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FPagador">
-        <property name="sourceAnchor" value="848,178" />
-        <property name="targetAnchor" value="900,178" />
+        <property name="sourceAnchor" value="336,733" />
+        <property name="targetAnchor" value="196,733" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FBeneficiario">
-        <property name="sourceAnchor" value="848,186" />
-        <property name="targetAnchor" value="900,186" />
+        <property name="sourceAnchor" value="336,817" />
+        <property name="targetAnchor" value="196,817" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FTitulo">
-        <property name="sourceAnchor" value="680,412" />
-        <property name="targetAnchor" value="538,412" />
+        <property name="sourceAnchor" value="411,1013" />
+        <property name="targetAnchor" value="663,1093" />
         <property name="bendpoints" value="" />
       </reference>
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FNossoNumeroFormatado" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.FCodBeneficiarioFormatado" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.GetNossoNumeroFormatado()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.GetCodBeneficiarioFormatado()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.SetNossoNumeroFormatado(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.TBoleto.SetCodBeneficiarioFormatado(System.string)" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="620,640,164,231" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="809,1164,227,291" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.GetBeneficiario()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.GetConta()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.GetPagador()" />
@@ -162,11 +167,14 @@
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.SetLinhaDigitavel(System.string)" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.SetCodigoBarras(System.string)" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.Gerar()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.GetNossoNumeroFormatado()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.GetCodBeneficiarioFormatado()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.SetNossoNumeroFormatado(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Boleto.IBoleto.SetCodBeneficiarioFormatado(System.string)" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Conta.TConta">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="960,560,166,448" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="726,10,166,448" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Conta.TConta.FBanco" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Conta.TConta.FLocalPagto" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Conta.TConta.FAgencia" />
@@ -193,25 +201,24 @@
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Conta.TConta.Convenio" />
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Conta.TConta.SeqNossoNumero" />
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Conta.TConta.FBanco">
-        <property name="sourceAnchor" value="1126,646" />
-        <property name="targetAnchor" value="1260,646" />
+        <property name="sourceAnchor" value="892,265" />
+        <property name="targetAnchor" value="1032,265" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Conta.TConta.Banco">
-        <property name="sourceAnchor" value="1126,638" />
-        <property name="targetAnchor" value="1260,638" />
+        <property name="sourceAnchor" value="892,201" />
+        <property name="targetAnchor" value="1032,201" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Factories.TFactoryBoleto">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="259,10,227,84" />
+      <property name="bounds" value="1074,490,227,84" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Factories.TFactoryBoleto.GetFormatter(GeraBoleto.Boleto.IBoleto)" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Pessoa.TEndereco">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="1140,0,192,281" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="10,1169,192,281" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Pessoa.TEndereco.FLogradouro" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Pessoa.TEndereco.FBairro" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Pessoa.TEndereco.FUf" />
@@ -229,8 +236,7 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="900,40,180,253" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="16,649,180,253" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.FEmail" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.FCnpjCpf" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.FNome" />
@@ -244,20 +250,19 @@
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.Telefone" />
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.Email" />
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.FEndereco">
-        <property name="sourceAnchor" value="1080,160" />
-        <property name="targetAnchor" value="1140,160" />
+        <property name="sourceAnchor" value="136,902" />
+        <property name="targetAnchor" value="136,1169" />
         <property name="bendpoints" value="" />
       </reference>
       <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Pessoa.TPessoa.Endereco">
-        <property name="sourceAnchor" value="1080,152" />
-        <property name="targetAnchor" value="1140,152" />
+        <property name="sourceAnchor" value="76,902" />
+        <property name="targetAnchor" value="76,1169" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="380,360,158,371" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="611,1093,158,433" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.FNossoNum" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.FEspecMoeda" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.FValor" />
@@ -278,11 +283,14 @@
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.NossoNum" />
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.DigitoNossoNum" />
       <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.Valor" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.FInstrucoes" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.Create()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.Destroy()" />
+      <reference referencedUin="delphi:e_property:src:GeraBoletoTest:GeraBoleto.Titulo.TTitulo.Instrucoes" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Banco001.TFactoryBBFormata">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="760,1400,298,84" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="962,370,298,84" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Banco001.TFactoryBBFormata.GetFormatacaoCampoLivre(System.string)" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Banco001.TBBConvenio7">
@@ -320,23 +328,22 @@
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Base.IFormataCampoLivre">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="780,1560,237,81" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="962,10,237,81" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Base.IFormataCampoLivre.Formata(GeraBoleto.Boleto.IBoleto)" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="1420,120,239,126" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="354,49,244,156" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Add()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Delete(System.Integer)" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Boletos()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.Imprimir()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.SetModuloImpressao(GeraBoleto.Impressao.IImpressaoBoleto)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.IBoletoContainer.GetModuloImpressao()" />
     </reference>
     <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer">
       <property name="$shortcutReference" value="true" />
-      <property name="bounds" value="1400,320,243,190" />
-      <property name="location_set_by_user" value="True" />
+      <property name="bounds" value="10,10,244,235" />
       <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.FBoletos" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Create()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Destroy()" />
@@ -345,8 +352,238 @@
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Boletos()" />
       <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.Imprimir()" />
       <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer:GeraBoleto.Container.IBoletoContainer">
-        <property name="sourceAnchor" value="1531,320" />
-        <property name="targetAnchor" value="1531,246" />
+        <property name="sourceAnchor" value="254,127" />
+        <property name="targetAnchor" value="354,127" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.FModuloImpressao" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.SetModuloImpressao(GeraBoleto.Impressao.IImpressaoBoleto)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.GetModuloImpressao()" />
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Container.TBoletoContainer.FModuloImpressao">
+        <property name="sourceAnchor" value="254,168" />
+        <property name="targetAnchor" value="1487,600" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:udmBoletoFastReport.TdmBoletoFastReport">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1740,1060,269,160" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmBoletoFastReport.TdmBoletoFastReport.Report" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmBoletoFastReport.TdmBoletoFastReport.frxDsBoletos" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmBoletoFastReport.TdmBoletoFastReport.frxBarCodeObject1" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:udmBoletoFastReport.TdmBoletoFastReport.DataModuleCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:udmBoletoFastReport.TdmBoletoFastReport.AdicionaDadosNoMemTable(GeraBoleto.Boleto.IBoleto)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="20,1500,255,670" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.Boletos" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBancoNumero" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBancoDigito" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBancoNome" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosContaLocalPagto" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosContaCodBeneficiario" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosContaCarteira" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenCnpjCpf" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenNome" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenLogradouro" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenNumero" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenBairro" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenCep" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenCidade" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenUF" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosBenFone" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitData" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitVencimento" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitNossoNumero" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitDataProc" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitDocumento" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitAceite" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitEspecDoc" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitEspecMoeda" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitValor" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosTitInstrucoes" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagCnpjCpf" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagNome" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagLogradouro" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagNumero" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagBairro" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagCep" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagCidade" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagUF" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosPagFone" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosCodigoBarras" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.BoletosLinhaDigitavel" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.DataModuleCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:udmDadosBoleto.TdmDadosBoleto.AdicionaDadosNoMemTable(GeraBoleto.Boleto.IBoleto)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="400,1900,294,1975" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.BoletoFortes" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLBandPrin" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw79" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw80" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw84" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw85" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw86" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw87" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw88" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw89" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw91" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw92" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw93" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel12" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel17" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel22" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel24" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel26" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel34" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel53" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel58" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel59" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel60" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel61" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel63" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel64" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel93" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel100" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel104" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel106" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel108" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel110" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel112" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel114" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel116" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw95" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel118" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw96" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw97" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw98" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw99" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw100" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw101" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw102" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw103" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw104" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw105" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw106" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw107" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw108" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw109" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw110" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw111" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel120" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel122" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw112" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel125" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel127" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel129" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel131" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel133" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel134" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel136" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel137" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.txtUsoBancoRecTop1" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel140" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel141" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel142" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel143" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel144" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel170" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel172" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel173" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel174" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel176" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel177" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel179" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel180" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.bcCodigoBarras" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw114" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw115" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw94" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel65" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw90" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDraw113" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText1" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText2" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText4" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText5" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText6" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText7" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText8" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText9" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText10" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText11" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText12" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel62" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText13" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText16" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText17" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText18" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText19" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText20" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLLabel181" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText21" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText22" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText24" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText26" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBMemo1" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText27" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText28" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLExpressionParser1" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText29" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText30" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBMemo2" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText3" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText14" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText15" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText23" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText31" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.dsBoleto" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText25" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLDBText32" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.RLBandPrinBeforePrint(System.TObject,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.FormCreate(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:ufrmBoletoFortesReport.TfrmBoletoFortesReport.AdicionaDadosNoMemTable(GeraBoleto.Boleto.IBoleto)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Impressao.Fortes.TImpressaoBoletoFortes">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1340,860,328,98" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Impressao.Fortes.TImpressaoBoletoFortes.Imprime(System.Generics.Collections.TList&lt;GeraBoleto.Boleto.IBoleto&gt;)" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Impressao.Fortes.TImpressaoBoletoFortes:GeraBoleto.Impressao.IImpressaoBoleto">
+        <property name="sourceAnchor" value="1574,860" />
+        <property name="targetAnchor" value="1574,681" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Impressao.IImpressaoBoleto">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1480,600,247,81" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Impressao.IImpressaoBoleto.Imprime(System.Generics.Collections.TList&lt;GeraBoleto.Boleto.IBoleto&gt;)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1720,820,343,160" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast.FReportFile" />
+      <reference referencedUin="delphi:e_field:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast.Dm" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast.Create(System.string)" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast.Imprime(System.Generics.Collections.TList&lt;GeraBoleto.Boleto.IBoleto&gt;)" />
+      <reference referencedUin="delphi:l_impl:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast:GeraBoleto.Impressao.IImpressaoBoleto">
+        <property name="sourceAnchor" value="1723,820" />
+        <property name="targetAnchor" value="1723,681" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:GeraBoletoTest:GeraBoleto.Impressao.FastReport.TImpressaoBoletoFast.Dm">
+        <property name="sourceAnchor" value="1874,980" />
+        <property name="targetAnchor" value="1874,1060" />
         <property name="bendpoints" value="" />
       </reference>
     </reference>

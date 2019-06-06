@@ -21,7 +21,7 @@ implementation
 { TBanco }
 
 uses
-  Sysutils;
+  Sysutils, GeraBoleto.Funcoes;
 
 procedure TBanco.SetDigitoNumero(const Value: string);
 begin
@@ -31,6 +31,8 @@ end;
 procedure TBanco.SetNumero(const Value: string);
 begin
   FNumero := Trim(Value);
+  if not IsNumber(FNumero) then
+    raise Exception.Create('Número do Banco inválido');
 end;
 
 end.

@@ -6,4 +6,8 @@
   <Option Name="namespaceFolder.Namespace1" Type="System.String" Value="Namespace1" Category="General" IsBrowsable="False" />
   <Option Name="namespaceFolder.GeraBoleto" Type="System.String" Value="GeraBoleto" Category="General" IsBrowsable="False" />
   <Option Name="namespaceFolder.GeraBoletoTest" Type="System.String" Value="GeraBoletoTest" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.ufrmBoletoFortesReport" Type="System.String" Value="ufrmBoletoFortesReport" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.TestContainerBoleto" Type="System.String" Value="TestContainerBoleto" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.GeraBoleto.Impressao" Type="System.String" Value="GeraBoleto\Impressao" Category="General" IsBrowsable="False" />
+  <Option Name="namespaceFolder.GeraBoleto.Impressao.FastReport" Type="System.String" Value="GeraBoleto\Impressao\FastReport" Category="General" IsBrowsable="False" />
 </TgConfig>
