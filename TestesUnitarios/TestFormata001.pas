@@ -76,7 +76,7 @@ end;
 
 procedure TestTFormata001.TestDigitoDoNumeroDoBancoInvalido;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FBoleto.GetConta.Banco.DigitoNumero := '8';
   FBoleto.Gerar;
   StopExpectingException('Nenhuma exceção gerada quando informado dígito do número do banco inválido');
@@ -110,7 +110,7 @@ end;
 
 procedure TestTFormata001.TestFormatacaoDaCarteiraCaracteresInvalidos;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FBoleto.GetConta.Carteira := 'a7';
   FBoleto.Gerar;
   StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na carteira');
@@ -118,7 +118,7 @@ end;
 
 procedure TestTFormata001.TestFormatacaoDaCarteiraQuantidadeCaracteresInvalido;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FBoleto.GetConta.Carteira := '017';
   FBoleto.Gerar;
   StopExpectingException('Nenhuma exceção gerada quando carteira com quantidade de caracteres inválida');

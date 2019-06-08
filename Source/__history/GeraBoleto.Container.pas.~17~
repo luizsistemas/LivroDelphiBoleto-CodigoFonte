@@ -3,7 +3,8 @@ unit GeraBoleto.Container;
 interface
 
 uses
-  GeraBoleto.Boleto, System.Generics.Collections, GeraBoleto.Impressao, SysUtils;
+  GeraBoleto.Boleto, System.Generics.Collections,
+    GeraBoleto.Impressao, SysUtils;
 
 type
   IBoletoContainer = interface
@@ -11,8 +12,9 @@ type
     function Add: IBoleto;
     procedure Delete(Index: Integer);
     function Boletos: TList<IBoleto>;
-    procedure SetModuloImpressao(AValue: IImpressaoBoleto);
-    procedure Imprimir(AReportFile: string = '');
+    procedure SetModuloImpressao(Value: IImpressaoBoleto);
+    function GetModuloImpressao: IImpressaoBoleto;
+    procedure Imprimir;
   end;
 
   TBoletoContainer = class(TInterfacedObject, IBoletoContainer)
@@ -25,7 +27,9 @@ type
     function Add: IBoleto;
     procedure Delete(Index: Integer);
     function Boletos: TList<IBoleto>;
-    procedure Imprimir(AReportFile: string = '');
+    procedure SetModuloImpressao(Value: IImpressaoBoleto);
+    function GetModuloImpressao: IImpressaoBoleto;
+    procedure Imprimir;
   end;
 
 implementation
@@ -41,6 +45,11 @@ destructor TBoletoContainer.Destroy;
 begin
   FBoletos.Free;
   inherited;
+end;
+
+function TBoletoContainer.GetModuloImpressao: IImpressaoBoleto;
+begin
+  Result := FModuloIMpressao;
 end;
 
 function TBoletoContainer.Add: IBoleto;
@@ -60,12 +69,18 @@ begin
     FBoletos.Delete(Index);
 end;
 
-procedure TBoletoContainer.Imprimir(AReportFile: string = '');
+procedure TBoletoContainer.Imprimir;
 begin
   if not Assigned(FModuloImpressao) then
     raise Exception.Create('Módulo de Impressão não selecionado');
 
   FModuloImpressao.Imprime(FBoletos);
+end;
+
+procedure TBoletoContainer.SetModuloImpressao(Value: IImpressaoBoleto);
+begin
+  if
+  FModuloImpressao := Value;
 end;
 
 end.

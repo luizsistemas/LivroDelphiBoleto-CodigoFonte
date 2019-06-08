@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf, Data.DB,
   FireDAC.Comp.DataSet, FireDAC.Comp.Client,
-  GeraBoleto.Boleto, FireDAC.Stan.StorageBin;
+  GeraBoleto.Boleto;
 
 type
   TdmDadosBoleto = class(TDataModule)
@@ -111,9 +111,10 @@ begin
   Boletos.Post;
 end;
 
+
 procedure TdmDadosBoleto.DataModuleCreate(Sender: TObject);
 begin
-  Boletos.Close;
+  //Boletos.Close;
   Boletos.Open;
 end;
 

@@ -3,7 +3,8 @@ unit GeraBoleto.Container;
 interface
 
 uses
-  GeraBoleto.Boleto, System.Generics.Collections, GeraBoleto.Impressao, SysUtils;
+  GeraBoleto.Boleto, System.Generics.Collections,
+    GeraBoleto.Impressao, SysUtils;
 
 type
   IBoletoContainer = interface
@@ -13,7 +14,7 @@ type
     function Boletos: TList<IBoleto>;
     procedure SetModuloImpressao(Value: IImpressaoBoleto);
     function GetModuloImpressao: IImpressaoBoleto;
-    procedure Imprimir(AReportFile: string = '');
+    procedure Imprimir;
   end;
 
   TBoletoContainer = class(TInterfacedObject, IBoletoContainer)
@@ -28,7 +29,7 @@ type
     function Boletos: TList<IBoleto>;
     procedure SetModuloImpressao(Value: IImpressaoBoleto);
     function GetModuloImpressao: IImpressaoBoleto;
-    procedure Imprimir(AReportFile: string = '');
+    procedure Imprimir;
   end;
 
 implementation
@@ -68,7 +69,7 @@ begin
     FBoletos.Delete(Index);
 end;
 
-procedure TBoletoContainer.Imprimir(AReportFile: string = '');
+procedure TBoletoContainer.Imprimir;
 begin
   if not Assigned(FModuloImpressao) then
     raise Exception.Create('Módulo de Impressão não selecionado');

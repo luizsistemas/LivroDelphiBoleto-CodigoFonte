@@ -136,8 +136,7 @@ procedure TFormata001.ValidaDados;
 begin
   if FBoleto.GetConta.Banco.DigitoNumero <> DIGITO_NUM then
     raise Exception.Create('Dígito do Número do Banco inválido!');
-  if not (FBoleto.GetConta.Carteira.Length = 2)  or
-    not IsNumber(FBoleto.GetConta.Carteira) then
+  if not (FBoleto.GetConta.Carteira.Length = 2) then
     raise Exception.Create('Carteira inválida!');
 end;
 

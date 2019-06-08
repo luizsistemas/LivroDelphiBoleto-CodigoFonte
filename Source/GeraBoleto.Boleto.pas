@@ -49,12 +49,10 @@ type
     procedure SetCampoLivre(Value: string);
     procedure SetCodigoBarras(Value: string);
     procedure SetLinhaDigitavel(Value: string);
-    // formatação específica para a impressão *************
     function GetNossoNumeroFormatado: string;
     function GetCodBeneficiarioFormatado: string;
     procedure SetNossoNumeroFormatado(Value: string);
     procedure SetCodBeneficiarioFormatado(Value: string);
-    //*****************************************************
     procedure Gerar;
   end;
 

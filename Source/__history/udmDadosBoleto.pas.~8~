@@ -113,7 +113,7 @@ end;
 
 procedure TdmDadosBoleto.DataModuleCreate(Sender: TObject);
 begin
-  Boletos.Close;
+//  Boletos.Close;
   Boletos.Open;
 end;
 

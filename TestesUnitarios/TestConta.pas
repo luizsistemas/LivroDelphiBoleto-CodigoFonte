@@ -41,7 +41,7 @@ end;
 
 procedure TestTConta.TestNumeroDaAgenciaComCaracteresInvalidos;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FConta.Agencia := '#895';
   StopExpectingException('Nenhuma exceção gerada quando número da agência contém letras ou símbolos');
 end;
@@ -54,7 +54,7 @@ end;
 
 procedure TestTConta.TestNumeroDaContaComCaracteresInvalidos;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FConta.Conta := '.123456';
   StopExpectingException('Nenhuma exceção gerada quando número da conta contém letras ou símbolos');
 end;

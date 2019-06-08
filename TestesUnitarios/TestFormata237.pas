@@ -43,7 +43,7 @@ var
 begin
   Conta := FBoleto.GetConta;
   Conta.Banco.Numero := '237';
-  Conta.Banco.DigitoNumero := '9';
+  Conta.Banco.DigitoNumero := '2';
   Conta.Agencia := '9999';
   Conta.DigitoAgencia := '9';
   Conta.Conta := '123456';
@@ -75,7 +75,7 @@ end;
 
 procedure TestTFormata237.TestDigitoDoNumeroDoBancoInvalido;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FBoleto.GetConta.Banco.DigitoNumero := '8';
   FBoleto.Gerar;
   StopExpectingException('Nenhuma exceção gerada quando informado dígito do número do banco inválido');
@@ -111,7 +111,7 @@ end;
 
 procedure TestTFormata237.TestNumeroDaContaComCarectereInvalido;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FBoleto.GetConta.Conta := 'a123';
   FBoleto.Gerar;  StopExpectingException('Nenhuma exceção gerada quando informado caractere inválido na conta');end;
 

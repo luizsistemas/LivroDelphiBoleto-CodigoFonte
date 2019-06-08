@@ -5,7 +5,7 @@ interface
 uses GeraBoleto.Boleto, GeraBoleto.Base;
 
 const
-  DIGITO_NUM = '2';
+  DIGITO_NUM = '9';
   NOME_BANCO = 'Bradesco';
 
 type

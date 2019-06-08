@@ -25,38 +25,11 @@ object dmBoletoFastReport: TdmBoletoFastReport
     CloseDataSource = False
     DataSet = dmDadosBoleto.Boletos
     BCDToCurrency = False
-    Left = 56
-    Top = 24
+    Left = 48
+    Top = 80
   end
   object frxBarCodeObject1: TfrxBarCodeObject
     Left = 208
-    Top = 24
-  end
-  object frxPDFExport1: TfrxPDFExport
-    UseFileCache = True
-    ShowProgress = True
-    OverwritePrompt = False
-    DataOnly = False
-    OpenAfterExport = False
-    PrintOptimized = False
-    Outline = False
-    Background = False
-    HTMLTags = True
-    Quality = 95
-    Transparency = False
-    Author = 'FastReport'
-    Subject = 'FastReport PDF export'
-    ProtectionFlags = [ePrint, eModify, eCopy, eAnnot]
-    HideToolbar = False
-    HideMenubar = False
-    HideWindowUI = False
-    FitWindow = False
-    CenterWindow = False
-    PrintScaling = False
-    PdfA = False
-    PDFStandard = psNone
-    PDFVersion = pv17
-    Left = 304
     Top = 24
   end
 end

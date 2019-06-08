@@ -42,7 +42,7 @@ end;
 
 procedure TestTBanco.TestNumeroDoBancoComCaracteresInvalidos;
 begin
-  StartExpectingException(exception);
+  StartExpectingException(Exception);
   FBanco.Numero := 'a001';
   StopExpectingException('Nenhuma exceção gerada quando número do banco contém letras ou símbolos');
 end;
